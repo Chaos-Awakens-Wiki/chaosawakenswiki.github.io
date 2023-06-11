@@ -84,6 +84,10 @@
 	border-bottom: lightskyblue 3px solid;
 }
 
+#entity-information-image-selector-item-walking {
+	border-bottom: transparent 3px solid;
+}
+
 .entity-information-stats-banner {
 	padding: 0;
 	margin: 0;
