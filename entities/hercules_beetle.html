@@ -10,12 +10,17 @@
 	<link rel="stylesheet" href="../styles/main_wiki_grid.css">
 	<link rel="stylesheet" href="../styles/main_section.css">
 	<link rel="stylesheet" href="../styles/entity_information.css">
+	<script type="text/javascript" src="../scripts/replace_variables.js"></script>
 	<script type="text/javascript" src="../scripts/change_image.js"></script>
 	<script type="text/javascript" src="../scripts/chaos_awakens_wiki_links.js"></script>
 	<script type="text/javascript" src="../scripts/invalid_links.js"></script>
 	<script type="text/javascript" src="../scripts/minecraft_links.js"></script>
 </head>
 <body>
+<script>
+	const health = 250;
+	const armor = 10;
+</script>
 <div class="page-header">
 	<a href="https://chaosawakens.github.io/">
 		<img class="chaos-awakens-logo" src="../images/logo.png" alt="Chaos Awakens Logo">
@@ -24,7 +29,7 @@
 <div class="wiki-grid">
 	<div class="wiki-grid-left">
 		<div class="main-section-header">
-			<h1>Hercules Beetle</h1>
+			<h1>${name}</h1>
 		</div>
 		<div>
 			<p>
@@ -47,13 +52,13 @@
 				<li>1 piece of <a data-minecraft="Enchanting">enchanted</a> <a href="../items/diamond.html">diamond</a> <a data-minecraft="Armor">armor</a>.
 				<li>1 to 3 pieces of <a data-minecraft="Enchanting">enchanted</a> <a href="../items/tiger's_eye.html">tiger's eye</a> <a data-minecraft="Armor">armor</a>.
 				<li>1 to 2 of the following <a href="../wiki_categories/gemstones.html">gemstones</a>:
-				<ul>
-					<li><a href="../items/diamond.html">Diamonds</a>
-					<li><a href="../items/emerald.html">Emeralds</a>
-					<li><a href="../items/tiger's_eye.html">Tiger's Eyes</a>
-					<li><a href="../items/tiger's_eye.html">Amethysts</a>
-					<li><a href="../items/tiger's_eye.html">Rubies</a>
-				</ul>
+					<ul>
+						<li><a href="../items/diamond.html">Diamonds</a>
+						<li><a href="../items/emerald.html">Emeralds</a>
+						<li><a href="../items/tiger's_eye.html">Tiger's Eyes</a>
+						<li><a href="../items/tiger's_eye.html">Amethysts</a>
+						<li><a href="../items/tiger's_eye.html">Rubies</a>
+					</ul>
 			</ul>
 		</div>
 		<!--
@@ -109,7 +114,7 @@
 	</div>
 	<div class="wiki-grid-right">
 		<div class="entity-information">
-			<p class="entity-information-name entity-information-name-item">Hercules Beetle</p>
+			<p class="entity-information-name entity-information-name-item">${name}</p>
 			<div class="entity-information-image-selector entity-information-item">
 				<p class="entity-information-image-selector-item"
 				   id="entity-information-image-selector-item-idle"
@@ -145,80 +150,102 @@
 			<p class="entity-information-stats-banner entity-information-stats-banner-item">Entity Information</p>
 			<div class="entity-information-stats-grid">
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-1-1">
-					Health<br>
-					Points
+					<div class="line-break-center">
+						Health<br>
+						Points
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-1-2">
-					250 (<img class="stat-icon" src="../images/misc/Heart.svg" alt="Heart"> <p class="normal">x 125</p>)
+					${health}
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-2-1">
-					Armour
+					<div class="line-break-center">
+						Armor
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-2-2">
-					10 (<img class="stat-icon" src="../images/misc/Armor.svg" alt="Armor"><img class="stat-icon" src="../images/misc/Armor.svg" alt="Armor"><img class="stat-icon" src="../images/misc/Armor.svg" alt="Armor"><img class="stat-icon" src="../images/misc/Armor.svg" alt="Armor"><img class="stat-icon" src="../images/misc/Armor.svg" alt="Armor">)
+					${armor}
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-3-1">
-					Behaviour
+					<div class="line-break-center">
+						Behaviour
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-3-2">
 					Aggressive
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-4-1">
-					Class
+					<div class="line-break-center">
+						Class
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-4-2">
 					Boss
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-5-1">
-					Hitbox<br>
-					Size
+					<div class="line-break-center">
+						Hitbox<br>
+						Size
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-5-2">
 					Height: 4.5 Blocks <br>
 					Width: 1.925 Blocks
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-6-1">
-					Attack<br>
-					Damage
+					<div class="line-break-center">
+						Attack<br>
+						Damage
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-6-2">
 					25 (<img class="stat-icon" src="../images/misc/Heart.svg" alt="Heart"> <p class="normal">x 12.5</p>)
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-7-1">
-					Attack<br>
-					Speed
+					<div class="line-break-center">
+						Attack<br>
+						Speed
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-7-2">
 					10
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-8-1">
-					Knockback<br>
-					Resistance
+					<div class="line-break-center">
+						Knockback<br>
+						Resistance
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-8-2">
 					0.6
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-9-1">
-					Movement<br>
-					Speed
+					<div class="line-break-center">
+						Movement<br>
+						Speed
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-9-2">
 					Grounded: 0.25<br>
 					Flying: 0.37
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-10-1">
-					Follow<br>
-					Range
+					<div class="line-break-center">
+						Follow<br>
+						Range
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-10-2">
 					40
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-11-1">
-					Version<br>
-					Added
+					<div class="line-break-center">
+						Version<br>
+						Added
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-11-2">
-					0.7
+					Beta 0.7
 				</div>
 			</div>
 		</div>

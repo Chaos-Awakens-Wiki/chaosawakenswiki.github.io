@@ -7,7 +7,7 @@
 }
 
 .main-section-header > h1 {
-	font-family: Verdana;
+	font-family: Verdana, serif;
 	font-size: 30px;
 	display: flex;
 	justify-content: center;
@@ -18,7 +18,7 @@
 }
 
 h2 {
-	font-family: Verdana;
+	font-family: Verdana, serif;
 	font-size: 25px;
 	padding-left: 0.5%;
 	padding-bottom: 7px;

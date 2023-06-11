@@ -10,12 +10,16 @@
 	<link rel="stylesheet" href="../styles/main_wiki_grid.css">
 	<link rel="stylesheet" href="../styles/main_section.css">
 	<link rel="stylesheet" href="../styles/entity_information.css">
+	<script type="text/javascript" src="../scripts/replace_variables.js"></script>
 	<script type="text/javascript" src="../scripts/change_image.js"></script>
 	<script type="text/javascript" src="../scripts/chaos_awakens_wiki_links.js"></script>
 	<script type="text/javascript" src="../scripts/invalid_links.js"></script>
 	<script type="text/javascript" src="../scripts/minecraft_links.js"></script>
 </head>
 <body>
+<script>
+	const health = 10;
+</script>
 <div class="page-header">
 	<a href="https://chaosawakens.github.io/">
 		<img class="chaos-awakens-logo" src="../images/logo.png" alt="Chaos Awakens Logo">
@@ -24,7 +28,7 @@
 <div class="wiki-grid">
 	<div class="wiki-grid-left">
 		<div class="main-section-header">
-			<h1>Crystal Apple Cow</h1>
+			<h1>${name}</h1>
 		</div>
 		<div>
 			<p>
@@ -110,7 +114,7 @@
 	</div>
 	<div class="wiki-grid-right">
 		<div class="entity-information">
-			<p class="entity-information-name entity-information-name-item">Crystal Apple Cow</p>
+			<p class="entity-information-name entity-information-name-item">${name}</p>
 			<div class="entity-information-image-selector entity-information-item">
 				<p class="entity-information-image-selector-item"
 				   id="entity-information-image-selector-item-idle"
@@ -136,25 +140,35 @@
 			<p class="entity-information-stats-banner entity-information-stats-banner-item">Entity Information</p>
 			<div class="entity-information-stats-grid">
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-1-1">
-					Health Points
+					<div class="line-break-center">
+						Health<br>
+						Points
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-1-2">
-					10 (<img class="stat-icon" src="../images/misc/Heart.svg" alt="Heart"><img class="stat-icon" src="../images/misc/Heart.svg" alt="Heart"><img class="stat-icon" src="../images/misc/Heart.svg" alt="Heart"><img class="stat-icon" src="../images/misc/Heart.svg" alt="Heart"><img class="stat-icon" src="../images/misc/Heart.svg" alt="Heart">)
+					${health}
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-2-1">
-					Behaviour
+					<div class="line-break-center">
+						Behaviour
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-2-2">
 					Passive
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-3-1">
-					Class
+					<div class="line-break-center">
+						Class
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-3-2">
 					Animal
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-4-1">
-					Hitbox Size
+					<div class="line-break-center">
+						Hitbox<br>
+						Size
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-4-2">
 					<p class="normal">
@@ -167,25 +181,37 @@
 					</p>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-5-1">
-					Movement Speed
+					<div class="line-break-center">
+						Movement<br>
+						Speed
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-5-2">
 					0.2
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-6-1">
-					Follow Range
+					<div class="line-break-center">
+						Follow<br>
+						Range
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-6-2">
 					10
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-7-1">
-					Version Added
+					<div class="line-break-center">
+						Version<br>
+						Added
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-7-2">
 					0.8
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-8-1">
-					Usable Items
+					<div class="line-break-center">
+						Usable<br>
+						Items
+					</div>
 				</div>
 				<div class="entity-information-stats-grid-slot entity-information-stats-grid-slot-8-2">
 					<p>

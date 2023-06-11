@@ -44,3 +44,10 @@ a:hover {
 	padding: 1rem;
 	width: 12.5rem;
 }
+
+.line-break-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
