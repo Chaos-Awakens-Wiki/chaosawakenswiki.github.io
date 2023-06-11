@@ -36,7 +36,7 @@
 
 .entity-information-image-selector {
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	font-weight: bold;
 	font-size: 1.25rem;
@@ -50,7 +50,7 @@
 	margin: 0;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	width: 50%;
+	width: auto;
 	cursor: pointer;
 }
 
@@ -84,6 +84,14 @@
 	border-bottom: lightskyblue 3px solid;
 }
 
+#entity-information-image-selector-item-awakening {
+	border-bottom: transparent 3px solid;
+}
+
+#entity-information-image-selector-item-death {
+	border-bottom: transparent 3px solid;
+}
+
 #entity-information-image-selector-item-walking {
 	border-bottom: transparent 3px solid;
 }
@@ -114,14 +122,7 @@
 	width: 100%;
 }
 
-.entity-information-stats-grid-1-1, .entity-information-stats-grid-1-2,
-.entity-information-stats-grid-2-1, .entity-information-stats-grid-2-2,
-.entity-information-stats-grid-3-1, .entity-information-stats-grid-3-2,
-.entity-information-stats-grid-4-1, .entity-information-stats-grid-4-2,
-.entity-information-stats-grid-5-1, .entity-information-stats-grid-5-2,
-.entity-information-stats-grid-6-1, .entity-information-stats-grid-6-2,
-.entity-information-stats-grid-7-1, .entity-information-stats-grid-7-2,
-.entity-information-stats-grid-8-1, .entity-information-stats-grid-8-2 {
+.entity-information-stats-grid-slot {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -132,11 +133,11 @@
 	border-bottom: lightskyblue 1px solid;
 }
 
-.entity-information-stats-grid-8-1, .entity-information-stats-grid-8-2 {
+.entity-information-stats-grid-slot:nth-last-child(-n+2) {
 	border-bottom: none;
 }
 
-.health-heart {
+.stat-icon {
 	width: 18px;
 	position: relative;
 	padding: 0;
