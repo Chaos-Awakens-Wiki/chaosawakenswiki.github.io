@@ -11,7 +11,12 @@ p {
 
 a {
 	color: lightskyblue;
+	cursor: pointer;
 	text-decoration: none;
+}
+
+a:hover {
+	color: #6aa2c6;
 }
 
 .normal {
