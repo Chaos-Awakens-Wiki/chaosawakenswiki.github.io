@@ -1,0 +1,19 @@
+﻿.main-section-header {
+	margin: 0 0 1.5rem;
+	padding: 0;
+	width: 20rem;
+	background-color: rgba(135, 206, 250, 0.7);
+	border-radius: 10px 10px 40px 10px;
+}
+
+.main-section-header > h1 {
+	color: white;
+	margin: 0;
+	padding: 0.65rem 0 0.65rem 4.5rem;
+}
+
+h2 {
+	padding-left: 0.5%;
+	padding-bottom: 7px;
+	border-bottom: #8d8d8d 1px solid;
+}

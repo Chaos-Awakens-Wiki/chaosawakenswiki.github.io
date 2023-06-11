@@ -1,0 +1,12 @@
+﻿.wiki-grid {
+	display: grid;
+	grid-template-columns: auto 22rem;
+}
+
+.wiki-grid-left {
+	margin: 1rem 3rem;
+}
+
+.wiki-grid-right {
+	margin: 1rem;
+}
