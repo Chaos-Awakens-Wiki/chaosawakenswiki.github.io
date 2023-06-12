@@ -24,3 +24,13 @@ h2 {
 	padding-bottom: 7px;
 	border-bottom: #8d8d8d 1px solid;
 }
+
+h3 {
+	font-family: Verdana, serif;
+	font-size: 20px
+}
+
+h3.categories-heading {
+	padding-bottom: 3px;
+	border-bottom: #8d8d8d 1px solid
+}

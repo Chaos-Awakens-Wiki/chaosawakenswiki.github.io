@@ -1,4 +1,4 @@
-﻿.entity-information {
+﻿.information {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -7,7 +7,7 @@
 	border-radius: 20px;
 }
 
-.entity-information-item {
+.information-item {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -15,7 +15,7 @@
 	width: 100%;
 }
 
-.entity-information-name-item {
+.information-name-item {
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -26,7 +26,7 @@
 	border-top-right-radius: 13px;
 }
 
-.entity-information-name {
+.information-name {
 	font-family: Verdana, serif;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
@@ -35,7 +35,7 @@
 	font-size: 1.25rem;
 }
 
-.entity-information-image-selector {
+.information-image-selector {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -44,7 +44,7 @@
 	border-top: lightskyblue 3px solid;
 }
 
-.entity-information-image-selector-item {
+.information-image-selector-item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -55,18 +55,18 @@
 	cursor: pointer;
 }
 
-.entity-information-image-selector-item:hover {
+.information-image-selector-item:hover {
 	background-color: rgba(135, 206, 250, 0.5);
 	transition: background-color 500ms;
 }
 
-.entity-information-image {
+.information-image {
 	padding: 0;
 	margin: 0;
 	width: 100%;
 }
 
-.entity-information-spawn-egg {
+.information-spawn-egg {
 	font-weight: bold;
 	display: flex;
 	align-items: center;
@@ -76,12 +76,12 @@
 	gap: 20%;
 }
 
-.entity-information-spawn-egg-image {
+.information-spawn-egg-image {
 	margin-right: 25px;
 	width: 32px;
 }
 
-.entity-information-stats-banner {
+.information-stats-banner {
 	font-family: Verdana, serif;
 	padding: 0;
 	margin: 0;
@@ -90,7 +90,7 @@
 	border-bottom: lightskyblue 3px solid;
 }
 
-.entity-information-stats-banner-item {
+.information-stats-banner-item {
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 	position: relative;
@@ -101,14 +101,14 @@
 	background-color: rgba(135, 206, 250, 0.7);
 }
 
-.entity-information-stats-grid {
+.information-stats-grid {
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-template-rows: repeat(6, auto);
 	width: 100%;
 }
 
-.entity-information-stats-grid-slot {
+.information-stats-grid-slot {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -119,7 +119,7 @@
 	border-bottom: lightskyblue 1px solid;
 }
 
-.entity-information-stats-grid-slot:nth-last-child(-n+2) {
+.information-stats-grid-slot:nth-last-child(-n+2) {
 	border-bottom: none;
 }
 
