@@ -52,12 +52,6 @@
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	width: auto;
-	cursor: pointer;
-}
-
-.information-image-selector-item:hover {
-	background-color: rgba(135, 206, 250, 0.5);
-	transition: background-color 500ms;
 }
 
 .information-image {

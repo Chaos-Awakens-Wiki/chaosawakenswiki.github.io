@@ -11,10 +11,10 @@
 	<link rel="stylesheet" href="../styles/main_section.css">
 	<link rel="stylesheet" href="../styles/information.css">
 	<script type="text/javascript" src="../scripts/replace_variables.js"></script>
-	<script type="text/javascript" src="../scripts/change_image.js"></script>
 	<script type="text/javascript" src="../scripts/chaos_awakens_wiki_links.js"></script>
 	<script type="text/javascript" src="../scripts/invalid_links.js"></script>
 	<script type="text/javascript" src="../scripts/minecraft_links.js"></script>
+	<script type="text/javascript" src="../scripts/small_screen.js"></script>
 </head>
 <body>
 <script>
@@ -52,7 +52,7 @@
 				<li>1 <a href="../items/big_hammer.html">Big Hammer</a>.
 				<li>1 piece of <a data-minecraft="Enchanting">enchanted</a> <a href="../items/diamond.html">diamond</a> <a data-minecraft="Armor">armor</a>.
 				<li>1 to 3 pieces of <a data-minecraft="Enchanting">enchanted</a> <a href="../items/tiger's_eye.html">tiger's eye</a> <a data-minecraft="Armor">armor</a>.
-				<li>1 to 2 of the following gemstones</a>:
+				<li>1 to 2 of the following gemstones:
 					<ul>
 						<li><a href="../items/diamond.html">Diamonds</a>
 						<li><a href="../items/emerald.html">Emeralds</a>
@@ -105,13 +105,29 @@
 				Placeholder Text
 			</p>
 		</div>
-		<div>
-			<h2>Gallery</h2>
-			<p>
-				Placeholder Text
-			</p>
-		</div>
 		-->
+		<div class="gallery">
+			<h2>Gallery</h2>
+			<div class="gallery-container">
+				<div class="image-container">
+					<img src="../images/entities/Hercules_Beetle.gif" alt="Hercules Beetle Idle Animation">
+					<div class="image-name">Idle Animation</div>
+				</div>
+				<div class="image-container">
+					<img src="../images/entities/Hercules_Beetle_(Awakening).gif" alt="Hercules Beetle Awakening Animation">
+					<div class="image-name">Awakening Animation</div>
+				</div>
+				<div class="image-container">
+					<img src="../images/entities/Hercules_Beetle_(Death).gif" alt="Hercules Beetle Death Animation">
+					<div class="image-name">Death Animation</div>
+				</div>
+				<div class="image-container">
+					<img src="../images/entities/Hercules_Beetle_(Walking).gif" alt="Hercules Beetle Walking Animation">
+					<div class="image-name">Walking Animation</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
 		<div>
 			<h3 class="categories-heading">Categories</h3>
 				<p>
@@ -122,28 +138,6 @@
 	<div class="wiki-grid-right">
 		<div class="information">
 			<p class="information-name information-name-item">${name}</p>
-			<div class="information-image-selector information-item">
-				<p class="information-image-selector-item"
-				   id="information-image-selector-item-idle"
-				   onclick="changeImage(`../images/entities/Hercules_Beetle.gif`, `Hercules Beetle Idle Gif`, `idle`);">
-					Idle
-				</p>
-				<p class="information-image-selector-item"
-				   id="information-image-selector-item-awakening"
-				   onclick="changeImage(`../images/entities/Hercules_Beetle_(Awakening).gif`, `Hercules Beetle Awakening Gif`, `awakening`);">
-					Awakening
-				</p>
-				<p class="information-image-selector-item"
-				   id="information-image-selector-item-death"
-				   onclick="changeImage(`../images/entities/Hercules_Beetle_(Death).gif`, `Hercules Beetle Death Gif`, `death`);">
-					Death
-				</p>
-				<p class="information-image-selector-item"
-				   id="information-image-selector-item-walking"
-				   onclick="changeImage(`../images/entities/Hercules_Beetle_(Walking).gif`, `Hercules Beetle Walking Gif`, `walking`);">
-					Walking
-				</p>
-			</div>
 			<img class="information-image information-item"
 				 id="information-image"
 				 src="../images/entities/Hercules_Beetle.gif"

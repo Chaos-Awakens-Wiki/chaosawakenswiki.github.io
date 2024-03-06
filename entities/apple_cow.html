@@ -11,10 +11,10 @@
 	<link rel="stylesheet" href="../styles/main_section.css">
 	<link rel="stylesheet" href="../styles/information.css">
 	<script type="text/javascript" src="../scripts/replace_variables.js"></script>
-	<script type="text/javascript" src="../scripts/change_image.js"></script>
 	<script type="text/javascript" src="../scripts/chaos_awakens_wiki_links.js"></script>
 	<script type="text/javascript" src="../scripts/invalid_links.js"></script>
 	<script type="text/javascript" src="../scripts/minecraft_links.js"></script>
+	<script type="text/javascript" src="../scripts/small_screen.js"></script>
 </head>
 <body>
 <script>
@@ -106,13 +106,21 @@
 				Placeholder Text
 			</p>
 		</div>
-		<div>
-			<h2>Gallery</h2>
-			<p>
-				Placeholder Text
-			</p>
-		</div>
 		-->
+		<div class="gallery">
+			<h2>Gallery</h2>
+			<div class="gallery-container">
+				<div class="image-container">
+					<img src="../images/entities/Apple_Cow.gif" alt="Apple Cow Idle Animation">
+					<div class="image-name">Idle Animation</div>
+				</div>
+				<div class="image-container">
+					<img src="../images/entities/Apple_Cow_(Walking).gif" alt="Apple Cow Walking Animation">
+					<div class="image-name">Walking Animation</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
 		<div>
 			<h3 class="categories-heading">Categories</h3>
 				<p>
@@ -123,18 +131,6 @@
 	<div class="wiki-grid-right">
 		<div class="information">
 			<p class="information-name information-name-item">${name}</p>
-			<div class="information-image-selector information-item">
-				<p class="information-image-selector-item"
-				   id="information-image-selector-item-idle"
-				   onclick="changeImage(`../images/entities/Apple_Cow.gif`, `Apple Cow Idle Gif`, `idle`);">
-					Idle
-				</p>
-				<p class="information-image-selector-item"
-				   id="information-image-selector-item-walking"
-				   onclick="changeImage(`../images/entities/Apple_Cow_(Walking).gif`, `Apple Cow Walking Gif`, `walking`);">
-					Walking
-				</p>
-			</div>
 			<img class="information-image information-item"
 				 id="information-image"
 				 src="../images/entities/Apple_Cow.gif"

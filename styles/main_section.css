@@ -34,3 +34,33 @@ h3.categories-heading {
 	padding-bottom: 3px;
 	border-bottom: #8d8d8d 1px solid
 }
+
+.gallery {
+	text-align: center;
+}
+
+.gallery-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	column-gap: 10px;
+	row-gap: 35px;
+}
+
+.image-container {
+	position: relative;
+}
+
+.image-container img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: 2px solid #8d8d8d;
+}
+
+.image-name {
+	position: absolute;
+	bottom: -30px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
