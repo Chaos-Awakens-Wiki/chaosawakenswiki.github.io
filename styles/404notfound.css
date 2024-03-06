@@ -1,0 +1,32 @@
+﻿html, body {
+	height: 100%;
+}
+
+.notfound {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	top: -2rem;
+	font-size: 1.2em;
+}
+
+.notfound > div {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+	.notfound {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.notfound {
+		font-size: 0.8em;
+	}
+}
