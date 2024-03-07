@@ -44,16 +44,18 @@
 	document.body.innerHTML = htmlContent
 
 	let newAttackDamage;
-	if (parent.attack_damage <= 10) {
-		const attack_damage = parent.attack_damage;
-		const attackDamageCount = attack_damage / 2;
-		if (attack_damage % 2 === 0) {
-			newAttackDamage = attack_damage + " (" + repeatString(attackDamageCount, healthIcon) + ")"
+	if (parent.attack_damage) {
+		if (parent.attack_damage <= 10) {
+			const attack_damage = parent.attack_damage;
+			const attackDamageCount = attack_damage / 2;
+			if (attack_damage % 2 === 0) {
+				newAttackDamage = attack_damage + " (" + repeatString(attackDamageCount, healthIcon) + ")"
+			} else {
+				newAttackDamage = attack_damage + " (" + repeatString(attackDamageCount - 1, healthIcon) + halfHealthIcon + ")"
+			}
 		} else {
-			newAttackDamage = attack_damage + " (" + repeatString(attackDamageCount - 1, healthIcon) + halfHealthIcon + ")"
+			newAttackDamage = attack_damage + " (" + attackDamageCount + " x " + healthIcon + ")"
 		}
-	} else {
-		newAttackDamage = attack_damage + " (" + attackDamageCount + " x " + healthIcon + ")"
 	}
 	htmlContent = htmlContent.replace(/\${attack_damage}/g, newAttackDamage);
 

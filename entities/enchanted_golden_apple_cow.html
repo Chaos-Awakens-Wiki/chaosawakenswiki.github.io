@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 	<link rel="icon" href="../favicon.ico">
-	<title>Crystal Apple Cow | Chaos Awakens Wiki</title>
+	<title>Enchanted Golden Apple Cow | Chaos Awakens Wiki</title>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../styles/common.css">
 	<link rel="stylesheet" href="../styles/main_wiki_grid.css">
@@ -14,6 +14,7 @@
 	<script type="text/javascript" src="../scripts/chaos_awakens_wiki_links.js"></script>
 	<script type="text/javascript" src="../scripts/invalid_links.js"></script>
 	<script type="text/javascript" src="../scripts/minecraft_links.js"></script>
+	<script type="text/javascript" src="../scripts/note.js"></script>
 	<script type="text/javascript" src="../scripts/small_screen.js"></script>
 </head>
 <body>
@@ -27,65 +28,215 @@
 </div>
 <div class="wiki-grid">
 	<div class="wiki-grid-left">
-		<div class="main-section-header">
+		<div class="main-section-header main-section-header-long">
 			<h1>${name}</h1>
 		</div>
 		<div>
 			<p>
-				<b>Crystal Apple Cows</b> are a passive mob found in the <a href="../dimensions/crystal_world.html">Crystal World</a>. They are a source of <a data-minecraft="Apple">apples</a>, <a href="../items/crystal_apple.html">crystal apples</a>, <a data-minecraft="Leather">leather</a>, <a data-minecraft="Beef">beef</a>, and <a data-minecraft="Milk">milk</a>.
+				<b>Enchanted Golden Apple Cows</b> are a passive mob found in the <a data-minecraft="Overworld">Overworld</a> and <a href="../dimensions/village_mania.html">Village Mania</a>. They are a source of <a data-minecraft="Apple">apples</a>, <a data-minecraft="Golden Apple">golden apples</a>, <a data-minecraft="Enchanted Golden Apple">enchanted golden apples</a>, <a data-minecraft="Leather">leather</a>, <a data-minecraft="Beef">beef</a>, and <a data-minecraft="Milk">milk</a>.
 			</p>
 		</div>
 		<div>
 			<h2>Spawning</h2>
 			<p>
-				Crystal apple cows spawn above <a href="../blocks/crystal_grass_block.html">crystal grass blocks</a> in small herds during world generation or individually afterwards. <br> <br>
+				Apple cows spawn above <a data-minecraft="Grass Block">grass blocks</a> in small herds during world generation or individually afterwards. Their spawn rate varies per biome. <br> <br>
 
-				Herds of four crystal apple cows spawn on crystal grass blocks at a <a data-minecraft="Light Level">light level</a> of 9 or higher with at least two blocks of space above in all <a href="../biomes/index.html">Crystal World biomes</a>. <br> <br>
+				Enchanted golden apple cows spawn on grass blocks at a <a data-minecraft="Light Level">light level</a> of 7 or higher with at least two blocks of space above in, in <a data-minecraft="Plains">plains</a> biomes in the Overworld, or in the <a href="../biomes/village_plains.html">village plains</a>, <a href="../biomes/village_savanna.html">village savanna</a> and <a href="../biomes/village_taiga.html">village taiga</a> biomes in Village Mania. <br> <br>
 
-				Most crystal apple cows spawn as adults, but they have a 5% chance of spawning as a calf (baby cow).
+				Most enchanted golden apple cows spawn as adults, but they have a 5% chance of spawning as a calf (baby cow).
 			</p>
 		</div>
 		<div>
 			<h2>Drops</h2>
-			<p>
-				An adult crystal apple cow drops:
-			</p>
+			<h3>Breeding</h3>
 			<ul>
-				<li>1 to 3 <a data-minecraft="Raw Beef">raw beef</a> (or <a data-minecraft="Steak">steak</a> if killed while on fire), with a maximum amount is increased by 1 per level of <a data-minecraft="Looting">Looting</a>, for a maximum of 6 with Looting III.
-				<li>0 to 2 <a data-minecraft="Leather">leather</a>, with a maximum amount increased by 1 per level of <a data-minecraft="Looting">Looting</a>, for a maximum of 5 with Looting III.
-				<li>2 to 4 <a data-minecraft="Apple">apples</a>, with a maximum amount increased by 1 per level of <a data-minecraft="Looting">Looting</a>, for a maximum of 5 with Looting III.
-				<li>1 to 2 crystal apple, if killed by the <a data-minecraft="Player">player</a> or <a data-minecraft="Tamed Wolf">tamed wolf</a>.
-				<li>1-3 experience orbs are dropped when killed by a <a data-minecraft="Player">player</a> or <a data-minecraft="Tamed Wolf">tamed wolf</a> or 1-7 experience orbs upon a successful breeding.
+				<li>1-7 experience orbs upon a successful breeding.
+			</ul>
+			<h3>On death</h3>
+			<p>
+				An adult enchanted golden apple cow drops:
+			</p>
+			<table style="text-align: center">
+				<tr>
+					<th colspan="2" rowspan="2">Item</th>
+					<th rowspan="2">Roll Chance</th>
+					<th colspan="4">Quantity (Roll Chance)</th>
+				</tr>
+				<tr>
+					<th>Default</th>
+					<th>Looting I</th>
+					<th>Looting II</th>
+					<th>Looting III</th>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Raw_Beef.png" alt="Invicon Raw Beef.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Raw Beef">Raw Beef</a><a data-note="1" class="note-1-return"><sup>[1]</sup></a></td>
+					<td>100%</td>
+					<td>1-3</td>
+					<td>2-4</td>
+					<td>3-5</td>
+					<td>4-6</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Leather.png" alt="Invicon Leather.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Leather">Leather</a></td>
+					<td>100%</td>
+					<td>0-2</td>
+					<td>1-3</td>
+					<td>2-4</td>
+					<td>3-5</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Apple.png" alt="Invicon Apple.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Apple">Apple</a></td>
+					<td>100%</td>
+					<td>2-4</td>
+					<td>3-5</td>
+					<td>4-6</td>
+					<td>5-7</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Golden_Apple.png" alt="Invicon Golden Apple.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Golden Apple">Golden Apple</a></td>
+					<td>100%</td>
+					<td>1-2</td>
+					<td>1-2</td>
+					<td>1-2</td>
+					<td>1-2</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Enchanted_Golden_Apple.gif" alt="Invicon Enchanted Golden Apple.gif" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Enchanted Golden Apple">Enchanted Golden Apple</a></td>
+					<td>100%</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+			</table>
+			<ol>
+				<li><span><a data-note="1-return" title="Jump up">↑</a></span><span class="note-1">Dropped as steak if on fire when killed.</span>
+			</ol>
+			<ul>
+				<li>1-3 experience orbs are dropped when killed by a <a data-minecraft="Player">player</a> or <a data-minecraft="Tamed Wolf">tamed wolf</a>.
 			</ul>
 			<p>
 				Killing a calf yields no <a data-minecraft="Item">items</a> nor <a data-minecraft="Experience">experience</a>.
 			</p>
+			<h3>Milking</h3>
+			<p>
+				An adult enchanted golden apple cow can be <a data-minecraft="Milk">milked</a> by using a <a data-minecraft="Bucket">bucket</a> on it, yielding a <a data-minecraft="Milk Bucket">milk bucket</a>.
+			</p>
 		</div>
-		<!--
 		<div>
 			<h2>Behaviour</h2>
 			<p>
-				Placeholder Text
+				An enchanted golden apple cow moos and huffs occasionally while wandering aimlessly, but tends to stay on well lit and grassy places. They avoid water unless following a player and always avoid <a data-minecraft="Rail">rails</a> and falls if it warrants <a data-minecraft="Damage">damage</a>. If harmed, enchanted golden apple cows flee for a few seconds.
+			</p><br>
+			<p>
+				Enchanted golden apple cows follow players holding <a data-minecraft="Wheat">wheat</a> within a six block radius.
 			</p>
 		</div>
+		<div>
+			<h2>Breeding</h2>
+			<p>
+				An enchanted golden apple cow follows a player who holds wheat but stops following if separated from the player by at least six blocks.
+			</p><br>
+			<p>
+				Adult enchanted golden apple cows enter love mode and pair off to create calves after they are given wheat, granting the player one to seven experience orbs. The parent enchanted golden apple cows have a cooldown of five minutes before they can breed again and the growth of calves can be accelerated using wheat; each use reduces the remaining growth duration by 10%.
+			</p><br>
+			<p>
+				If the "enableEnchantedAnimalBreeding" config value is set to false (default value). Calves obtained by breeding enchanted golden apple cows will always be <a href="../entities/golden_apple_cow.html">golden apple cows</a>.<br>
+				If the config value has been set to true, calves obtained by breeding enchanted golden apple cows will nearly always be enchanted golden apple cows. There will also be a 1 in 1000 chance to breed an <a href="../entities/ultimate_apple_cow.html">ultimate apple cow</a> instead.
+			</p><br>
+			<p>
+				Baby cows take 20 minutes to grow up and follow adult cows, preferring them instead of a player holding wheat. The calf that results from breeding attempts to go to the nearest available block to its parent, even if no path can be found. A calf pathfinds to another adult cow if it is separated from its parent by more than 24 blocks.
+			</p>
+		</div>
+		<!--
 		<div>
 			<h2>Sounds</h2>
 			<p>
 				Placeholder Text
 			</p>
 		</div>
+		-->
 		<div>
 			<h2>Data Values</h2>
-			<p>
-				Placeholder Text
-			</p>
+			<h3>ID</h3>
+			<table style="text-align: center">
+				<tr>
+					<th>Name</th>
+					<th>Identifier</th>
+					<th>Translation key</th>
+				</tr>
+				<tr>
+					<td>Enchanted Golden Apple Cow</td>
+					<td><code>enchanted_golden_apple_cow</code></td>
+					<td><code>entity.chaosawakens.enchanted_golden_apple_cow</code></td>
+				</tr>
+			</table>
 		</div>
 		<div>
 			<h2>Advancements</h2>
-			<p>
-				Placeholder Text
-			</p>
+			<table>
+				<tr>
+					<th>Icon</th>
+					<th>Advancement</th>
+					<th>In-game description</th>
+					<th>Parent</th>
+					<th>Actual requirements (if different)</th>
+					<th>Resource location</th>
+				</tr>
+				<tr>
+					<td>
+						<span class="plainlinks" style="display: inline-block; position: relative; width:52px; height:52px;">
+							<a href="../advancements/chaos_awakens.html">
+								<img alt="Advancement-plain-raw.png" src="https://minecraft.wiki/images/Advancement-plain-raw.png" width="52" height="52">
+							</a>
+							<span style="position:absolute; left:10px; top:10px; line-height:0">
+								<a href="../advancements/chaos_awakens.html">
+									<img alt="Invicon Golden Apple Cow Spawn Egg.png" src="../images/items/golden_apple_cow_spawn_egg.png" width="32" height="32">
+								</a>
+							</span>
+						</span>
+					</td>
+					<td><bold>Shiny Cows!</bold></td>
+					<td>Breed 2 Golden Apple Cows.</td>
+					<td>An Apple Cow a day...</td>
+					<td>
+						Breed a pair of any of these 2 mobs:
+						<ul>
+							<li><a href="../entities/golden_apple_cow.html">Golden Apple Cow</a></li>
+							<li><bold>Enchanted Golden Apple Cow</bold></li>
+						</ul>
+					</td>
+					<td><code>chaosawakens:root/shiny_cows</code></td>
+				</tr>
+				<tr>
+					<td>
+						<span class="plainlinks" style="display: inline-block; position: relative; width:52px; height:52px;">
+							<a href="../advancements/chaos_awakens.html">
+								<img alt="Advancement-plain-raw.png" src="https://minecraft.wiki/images/Advancement-plain-raw.png" width="52" height="52">
+							</a>
+							<span style="position:absolute; left:10px; top:10px; line-height:0">
+								<a href="../advancements/chaos_awakens.html">
+									<img alt="Invicon Golden Apple Cow Spawn Egg.png" src="../images/items/golden_apple_cow_spawn_egg.png" width="32" height="32">
+								</a>
+							</span>
+						</span>
+					</td>
+					<td><bold>The Golden Child</bold></td>
+					<td>Breed an Ultimate Apple Cow from 2 Enchanted Golden Apple Cows.</td>
+					<td>Shiny Cows!</td>
+					<td>
+						Breed a pair of <bold>Enchanted Golden Apple Cows</bold> and get an offspring of an <a href="../entities/ultimate_apple_cow.html">Ultimate Apple Cow</a>
+					</td>
+					<td><code>chaosawakens:root/the_golden_child</code></td>
+				</tr>
+			</table>
 		</div>
+		<!--
 		<div>
 			<h2>History</h2>
 			<p>
@@ -105,15 +256,16 @@
 			</p>
 		</div>
 		-->
+		<h2>Gallery</h2>
+		<p class="extra-information">Appears enchanted in-game.</p>
 		<div class="gallery">
-			<h2>Gallery</h2>
 			<div class="gallery-container">
 				<div class="image-container">
-					<img src="../images/entities/Crystal_Apple_Cow.gif" alt="Crystal Apple Cow Idle Animation">
+					<img src="../images/entities/Golden_Apple_Cow.gif" alt="Enchanted Golden Apple Cow Idle Animation">
 					<div class="image-name">Idle Animation</div>
 				</div>
 				<div class="image-container">
-					<img src="../images/entities/Crystal_Apple_Cow_(Walking).gif" alt="Crystal Apple Cow Walking Animation">
+					<img src="../images/entities/Golden_Apple_Cow_(Walking).gif" alt="Enchanted Golden Apple Cow Walking Animation">
 					<div class="image-name">Walking Animation</div>
 				</div>
 			</div>
@@ -121,23 +273,23 @@
 		<br><br>
 		<div>
 			<h3 class="categories-heading">Categories</h3>
-				<ul class="categories-inner">
-					<li><a href="../entities.html">Entities</a></li>
-				</ul>
+			<ul class="categories-inner">
+				<li><a href="../entities.html">Entities</a></li>
+			</ul>
 		</div>
 	</div>
 	<div class="wiki-grid-right">
 		<div class="information">
-			<p class="information-name information-name-item">${name}</p>
+			<p class="information-name information-name-long information-name-item">${name}</p>
 			<img class="information-image information-item"
 				 id="information-image"
-				 src="../images/entities/Crystal_Apple_Cow.gif"
-				 alt="Crystal Apple Cow Idle Animation">
+				 src="../images/entities/Golden_Apple_Cow.gif"
+				 alt="Enchanted Golden Apple Cow Idle Animation">
 			<span class="information-spawn-egg information-item">
 				Spawn Egg
 				<img class="information-spawn-egg-image"
-					 src="../images/items/Crystal_Apple_Cow_Spawn_Egg.png"
-					 alt="Crystal Apple Cow Spawn Egg">
+					 src="../images/items/Golden_Apple_Cow_Spawn_Egg.png"
+					 alt="Enchanted Golden Apple Cow Spawn Egg">
 			</span>
 			<p class="information-stats-banner information-stats-banner-item">Entity Information</p>
 			<div class="information-stats-grid">
