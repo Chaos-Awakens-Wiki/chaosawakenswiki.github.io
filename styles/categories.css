@@ -4,7 +4,7 @@
 
 .entity-grid {
 	display: grid;
-	grid-template-columns: repeat(8, 1fr); /* 8 columns */
+	grid-template-columns: repeat(8, min-content); /* 8 columns */
 	gap: 10px; /* Gap between items */
 }
 
