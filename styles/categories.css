@@ -1,9 +1,37 @@
-﻿/* CSS for styling the links */
-ul {
-	list-style-type: none;
-	padding: 0;
+﻿.main-section {
+	margin: 1rem 2rem;
 }
 
-li {
-	margin-bottom: 5px;
+.entity-grid {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr); /* 8 columns */
+	gap: 10px; /* Gap between items */
+}
+
+.entity-item {
+	text-align: center;
+	border: white 5px solid;
+	background-color: #6aa2c644;
+	width: 190px;
+	height: 130px;
+	padding: 1rem;
+}
+
+.entity-item:hover {
+	border: #bad5f7 5px solid;
+	background-color: #2b597544;
+}
+
+.entity-item:hover > .entity-text {
+	color: #bad5f7;
+	font-weight: bold;
+}
+
+.entity-text {
+	color: white;
+}
+
+.entity-item img {
+	width: 100px; /* Adjust image width as needed */
+	height: 100px; /* Adjust image height as needed */
 }

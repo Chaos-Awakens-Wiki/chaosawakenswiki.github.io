@@ -1,30 +1,33 @@
-﻿window.onload = function() {
-	// Function to fetch the list of HTML files in the entities folder
-	function fetchEntities() {
-		return fetch('/entities/') // Adjust the path to your entities folder
-			.then(response => response.text())
-			.then(text => {
-				const parser = new DOMParser();
-				const htmlDocument = parser.parseFromString(text, 'text/html');
-				const links = Array.from(htmlDocument.querySelectorAll('a[href$=".html"]'));
-				return links.map(link => link.getAttribute('href'));
-			})
-			.catch(error => console.error('Error fetching entities:', error));
+﻿(async () => {
+	const user = 'ChaosAwakensWiki';
+	const repo = 'chaosawakenswiki.github.io';
+	const directory = 'entities';
+
+	const response = await fetch(`https://api.github.com/repos/${user}/${repo}/contents/${directory}`);
+	const data = await response.json();
+
+	let htmlString = '<div class="entity-grid">';
+
+	for (let file of data) {
+		if (file.type === 'file' && file.name.endsWith('.html')) {
+			const fileName = file.name.replace('.html', '');
+			const displayName = fileName.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+			const imageName = fileName.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('_') + '.gif';
+			const imageUrl = `images/entities/${imageName}`;
+			htmlString += `<a href="${file.html_url}" target="_blank" class="entity-link">
+                                <div class="entity-item">
+                                    <img src="${imageUrl}" alt="${displayName}">
+                                    <div class="entity-text">${displayName}</div>
+                                </div>
+                            </a>`;
+		}
 	}
 
-	// Function to generate the list of links
-	function generateEntityLinks(entityFiles) {
-		const entityList = document.getElementById('entityList');
-		entityFiles.forEach(file => {
-			const listItem = document.createElement('li');
-			const link = document.createElement('a');
-			link.href = `/entities/${file}`; // Adjust the path as needed
-			link.textContent = file.replace('.html', '');
-			listItem.appendChild(link);
-			entityList.appendChild(listItem);
-		});
+	htmlString += '</div>';
+	const entityList = document.getElementById('entityList');
+	if (entityList) {
+		entityList.innerHTML = htmlString;
+	} else {
+		console.error('Element with id "entityList" not found.');
 	}
-
-	// Fetch entities and generate links when the page loads
-	fetchEntities().then(generateEntityLinks);
-};
+})();
