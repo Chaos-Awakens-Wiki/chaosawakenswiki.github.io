@@ -35,6 +35,10 @@ h3.categories-heading {
 	border-bottom: #8d8d8d 1px solid
 }
 
+.categories-inner {
+	padding-left: 1rem;
+}
+
 .gallery {
 	text-align: center;
 }
@@ -63,4 +67,8 @@ h3.categories-heading {
 	left: 0;
 	width: 100%;
 	text-align: center;
+}
+
+.image-name-long {
+	bottom: -55px;
 }

@@ -18,7 +18,9 @@
 				imageName = imageName.replace('Enchanted_', '');
 			}
 			const imageUrl = `images/entities/${imageName}`;
-			htmlString += `<a href="${file.html_url}" target="_blank" class="entity-link">
+			// Construct the link using the file name directly
+			const fileUrl = `${directory}/${file.name}`;
+			htmlString += `<a href="${fileUrl}" target="_blank" class="entity-link">
                                 <div class="entity-item">
                                     <img src="${imageUrl}" alt="${displayName}">
                                     <div class="entity-text">${displayName}</div>
