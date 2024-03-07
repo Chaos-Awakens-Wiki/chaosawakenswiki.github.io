@@ -4,10 +4,11 @@
 	links.forEach(function(link) {
 		const href = link.getAttribute('href');
 		const data_minecraft = link.getAttribute('data-minecraft');
+		const data_note = link.getAttribute('data-note');
 		const xhr = new XMLHttpRequest();
 		xhr.open('HEAD', href, true);
 		xhr.onreadystatechange = function () {
-			if (!data_minecraft) {
+			if (!data_minecraft && !data_note) {
 				if (xhr.readyState === 4) {
 					if (xhr.status === 404) {
 						link.style.color = '#ff6767';

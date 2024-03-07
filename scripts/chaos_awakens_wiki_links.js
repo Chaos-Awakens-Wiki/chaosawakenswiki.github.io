@@ -4,9 +4,10 @@
 	links.forEach(function(link) {
 		const href = link.getAttribute('href')
 		const data_minecraft = link.getAttribute('data-minecraft');
+		const data_note = link.getAttribute('data-note');
 		const hasImageReference = link.innerHTML.includes('<img');
 
-		if (!data_minecraft && !hasImageReference) {
+		if (!data_minecraft && !data_note && !hasImageReference) {
 			link.addEventListener('mouseover', function(event) {
 				fetch(href)
 					.then(response => response.text())
