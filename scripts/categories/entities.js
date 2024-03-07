@@ -12,7 +12,11 @@
 		if (file.type === 'file' && file.name.endsWith('.html')) {
 			const fileName = file.name.replace('.html', '');
 			const displayName = fileName.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-			const imageName = fileName.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('_') + '.gif';
+			let imageName = fileName.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('_') + '.gif';
+			// Check if imageName contains "Enchanted_"
+			if (imageName.includes('Enchanted_')) {
+				imageName = imageName.replace('Enchanted_', '');
+			}
 			const imageUrl = `images/entities/${imageName}`;
 			htmlString += `<a href="${file.html_url}" target="_blank" class="entity-link">
                                 <div class="entity-item">
