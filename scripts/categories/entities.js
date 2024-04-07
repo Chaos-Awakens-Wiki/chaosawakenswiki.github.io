@@ -20,7 +20,7 @@
 			const imageUrl = `images/entities/${imageName}`;
 			// Construct the link using the file name directly
 			const fileUrl = `${directory}/${file.name}`;
-			htmlString += `<a href="${fileUrl}" target="_blank" class="category-link">
+			htmlString += `<a href="${fileUrl}" class="category-link">
                                 <div class="category-item">
                                     <img src="${imageUrl}" alt="${displayName}">
                                     <div class="category-text">${displayName}</div>

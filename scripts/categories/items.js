@@ -13,10 +13,14 @@
 			const fileName = file.name.replace('.html', '');
 			const displayName = fileName.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 			let imageName = fileName.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('_') + '.png';
+			// Check if imageName contains "Enchanted_"
+			if (imageName.includes('Enchanted_')) {
+				imageName = imageName.replace('Enchanted_', '');
+			}
 			const imageUrl = `images/items/${imageName}`;
 			// Construct the link using the file name directly
 			const fileUrl = `${directory}/${file.name}`;
-			htmlString += `<a href="${fileUrl}" target="_blank" class="category-link">
+			htmlString += `<a href="${fileUrl}" class="category-link">
                                 <div class="category-item">
                                     <img src="${imageUrl}" alt="${displayName}">
                                     <div class="category-text">${displayName}</div>
