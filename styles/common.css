@@ -39,6 +39,7 @@ a:hover {
 	padding: 0;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 50%);
+	border-bottom: 0.25rem solid rgba(135, 206, 250, 0.7);
 }
 
 .chaos-awakens-logo {
