@@ -33,13 +33,44 @@ a:hover {
 .normal {
 	font-weight: normal;
 }
-
 .page-header {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 50%);
 	border-bottom: 0.25rem solid rgba(135, 206, 250, 0.7);
+	display: flex;
+	align-items: center;
+}
+
+.navigation {
+	list-style-type: none;
+	display: inline-flex;
+	margin-right: auto;
+}
+
+.navigation li {
+	margin-right: 20px;
+}
+
+.navigation li:last-child {
+	margin-right: 0;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	transition: color 0.3s, border 0.3s, background-color 0.3s;
+	padding: 15px;
+	border: transparent solid 3px;
+	border-radius: 15px;
+}
+
+.navigation a:hover {
+	color: color-mix(in srgb, lightskyblue 55%, white 45%);
+	background-color: #333;
+	border: color-mix(in srgb, lightskyblue 55%, white 45%) solid 3px;
 }
 
 .chaos-awakens-logo {
@@ -52,4 +83,80 @@ a:hover {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+}
+
+.hamburger {
+	z-index: 1000;
+	display: none;
+	padding: 18px;
+	cursor: pointer;
+	margin-left: auto;
+}
+
+.bar {
+	z-index: 1000;
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: white;
+}
+
+.nav-dropdown {
+	display: none;
+}
+
+@media (max-width: 1100px) {
+	.navigation {
+		display: none;
+	}
+
+	.hamburger {
+		display: block;
+	}
+	
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+	
+	.nav-dropdown.active {
+		list-style-type: none;
+		display: block;
+		margin-right: auto;
+	}
+	
+	.nav-dropdown li {
+		padding: 1rem 0;
+		margin-right: 20px;
+	}
+
+	.nav-dropdown li:last-child {
+		margin-right: 0;
+	}
+
+	.nav-dropdown a {
+		text-decoration: none;
+		color: #fff;
+		font-weight: bold;
+		transition: color 0.3s, border 0.3s, background-color 0.3s;
+		padding: 15px;
+		border: transparent solid 3px;
+		border-radius: 15px;
+	}
+
+	.nav-dropdown a:hover {
+		color: color-mix(in srgb, lightskyblue 55%, white 45%);
+		background-color: #333;
+		border: color-mix(in srgb, lightskyblue 55%, white 45%) solid 3px;
+	}
 }

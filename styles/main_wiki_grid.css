@@ -5,6 +5,7 @@
 
 .wiki-grid-left {
 	margin: 1rem 3rem;
+	min-width: 0;
 }
 
 .wiki-grid-right {

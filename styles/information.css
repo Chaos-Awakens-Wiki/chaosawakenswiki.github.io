@@ -3,6 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background: #000016;
 	border: lightskyblue 5px solid;
 	border-radius: 20px;
 }
