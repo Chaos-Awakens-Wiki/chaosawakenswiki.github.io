@@ -17,6 +17,7 @@
 	<script type="text/javascript" src="../scripts/invalid_links.js"></script>
 	<script type="text/javascript" src="../scripts/minecraft_links.js"></script>
 	<script type="text/javascript" src="../scripts/small_screen.js"></script>
+	<script type="text/javascript" src="../scripts/rotating_images.js"></script>
 </head>
 <body>
 <div class="page-header">
@@ -90,78 +91,14 @@
 				</tr>
 				<tr>
 					<th rowspan="3">Ruby</th>
-					<td><bold>Ruby Ore</bold> + Any <a data-minecraft="Fuel">fuel</a></td>
-					<td>
-						<span class="mcui mcui-Furnace pixel-image">
-							<span class="mcui-input">
-								<span class="invslot">
-									<span class="invslot-item">
-										<a href="../blocks/ruby_ore.html">
-											<span class="sprite inv-sprite" style="background: url(../images/blocks/Ruby_Ore.png); background-size: 32px 32px;"></span>
-										</a>
-									</span>
-								</span>
-								<span class="mcui-fuel"><br></span>
-								<span class="invslot">
-									<span class="invslot-item">
-										<a data-minecraft="Fuel">
-											<span class="sprite inv-sprite" style="background: url(https://minecraft.wiki/images/Invicon_Coal.png); background-size: 32px 32px;"></span>
-										</a>
-									</span>
-								</span>
-							</span>
-							<span class="mcui-arrow"><br></span>
-							<span class="mcui-output">
-								<span class="invslot invslot-large">
-									<span class="invslot-item">
-										<span class="sprite inv-sprite" title="Ruby" style="background: url(../images/items/Ruby.png); background-size: 32px 32px;"></span>
-									</span>
-								</span>
-							</span>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<td><bold>Netherrack Ruby Ore</bold> + Any <a data-minecraft="Fuel">fuel</a></td>
-					<td>
-						<span class="mcui mcui-Furnace pixel-image">
-							<span class="mcui-input">
-								<span class="invslot">
-									<span class="invslot-item">
-										<a href="../blocks/netherrack_ruby_ore">
-											<span class="sprite inv-sprite" style="background: url(../images/blocks/Netherrack_Ruby_Ore.png); background-size: 32px 32px;"></span>
-										</a>
-									</span>
-								</span>
-								<span class="mcui-fuel"><br></span>
-								<span class="invslot">
-									<span class="invslot-item">
-										<a data-minecraft="Fuel">
-											<span class="sprite inv-sprite" style="background: url(https://minecraft.wiki/images/Invicon_Coal.png); background-size: 32px 32px;"></span>
-										</a>
-									</span>
-								</span>
-							</span>
-							<span class="mcui-arrow"><br></span>
-							<span class="mcui-output">
-								<span class="invslot invslot-large">
-									<span class="invslot-item">
-										<span class="sprite inv-sprite" title="Ruby" style="background: url(../images/items/Ruby.png); background-size: 32px 32px;"></span>
-									</span>
-								</span>
-							</span>
-						</span>
-					</td>
-				</tr>
-				<tr>
-					<td><bold>Blackstone Ruby Ore</bold> + Any <a data-minecraft="Fuel">fuel</a></td>
+					<td><bold>Ruby Ore</bold>&nbsp;or<br><bold>Netherrack Ruby Ore</bold>&nbsp;or<br><bold>Blackstone Ruby Ore</bold>&nbsp;+<br>Any <a data-minecraft="Fuel">fuel</a></td>
 					<td>
 						<span class="mcui mcui-Furnace pixel-image">
 							<span class="mcui-input">
 								<span class="invslot">
 									<span class="invslot-item">
 										<a href="../blocks/blackstone_ruby_ore">
-											<span class="sprite inv-sprite" style="background: url(../images/blocks/Blackstone_Ruby_Ore.png); background-size: 32px 32px;"></span>
+											<span class="sprite inv-sprite" id="swap-background" data-images="../images/blocks/Ruby_Ore.png,../images/blocks/Netherrack_Ruby_Ore.png,../images/blocks/Blackstone_Ruby_Ore.png" style="background: url(../images/blocks/Ruby_Ore.png); background-size: 32px 32px;"></span>
 										</a>
 									</span>
 								</span>
@@ -198,9 +135,10 @@
 		<div class="information">
 			<p class="information-name information-name-item">${name}</p>
 			<img class="information-image information-item"
-				 id="entity-information-image"
+				 id="swap-image"
 				 src="../images/blocks/Ruby_Ore.png"
-				 alt="Ruby Ore Png">
+				 alt="Ruby Ore Png"
+				 data-images="../images/blocks/Ruby_Ore.png,../images/blocks/Netherrack_Ruby_Ore.png,../images/blocks/Blackstone_Ruby_Ore.png">
 			<p class="information-stats-banner information-stats-banner-item">Details</p>
 			<div class="information-stats-grid">
 				<div class="information-stats-grid-slot information-stats-grid-slot-1-1">
