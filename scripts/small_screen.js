@@ -7,15 +7,30 @@ function moveElements() {
 	const mainSectionHeader = document.querySelector('.main-section-header');
 	const wikiGridLeft = document.querySelector('.wiki-grid-left');
 
-	if (screenWidth <= 950) {
-		wikiGridRight.parentNode.removeChild(wikiGridRight);
-		mainSectionHeader.parentNode.insertBefore(wikiGridRight, mainSectionHeader.nextSibling);
-		wikiGridLeft.style.margin = '10px';
+	if (!wikiGridRight && wikiGridLeft) {
+		wikiGridLeft.style.margin = '1rem';
 		wikiGrid.style.display = 'block';
+	} else if (screenWidth <= 950) {
+		if (wikiGridRight && mainSectionHeader) {
+			if (wikiGridRight.parentNode) {
+				wikiGridRight.parentNode.removeChild(wikiGridRight);
+			}
+			mainSectionHeader.parentNode.insertBefore(wikiGridRight, mainSectionHeader.nextSibling);
+		}
+		if (wikiGridLeft) {
+			wikiGridLeft.style.margin = '10px';
+		}
+		if (wikiGrid) {
+			wikiGrid.style.display = 'block';
+		}
 	} else {
-		wikiGridLeft.parentNode.insertBefore(wikiGridRight, wikiGridLeft.nextSibling);
-		wikiGridLeft.style.margin = '';
-		wikiGrid.style.display = '';
+		if (wikiGridRight && wikiGridLeft) {
+			wikiGridLeft.parentNode.insertBefore(wikiGridRight, wikiGridLeft.nextSibling);
+			wikiGridLeft.style.margin = '';
+		}
+		if (wikiGrid) {
+			wikiGrid.style.display = '';
+		}
 	}
 }
 

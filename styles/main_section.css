@@ -112,3 +112,42 @@ code {
 bold {
 	font-weight: bold;
 }
+
+.hatnote {
+	font-size: 85%;
+	color: #bbb;
+	margin: -12.5px 0 10px 5px;
+}
+
+.no-padding {
+	padding: 0;
+	margin: 0;
+}
+
+.align-image {
+	position: relative;
+	top: 5px;
+}
+
+ul.block-list > li {
+	font-size: 80%;
+}
+
+.two-columns {
+	columns: 2;
+	-webkit-columns: 2;
+	-moz-columns: 2;
+	max-width: max-content;
+}
+
+.two-columns > li {
+	width: 100%
+}
+
+@media (max-width: 750px) {
+	.two-columns {
+		columns: 1;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+	}
+}
