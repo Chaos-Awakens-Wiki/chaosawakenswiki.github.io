@@ -10,11 +10,13 @@
 	<link rel="stylesheet" href="../styles/main_wiki_grid.css">
 	<link rel="stylesheet" href="../styles/main_section.css">
 	<link rel="stylesheet" href="../styles/information.css">
+	<link rel="stylesheet" href="../styles/crafting_recipe.css">
 	<script type="text/javascript" src="../scripts/header.js"></script>
 	<script type="text/javascript" src="../scripts/replace_variables.js"></script>
 	<script type="text/javascript" src="../scripts/chaos_awakens_wiki_links.js"></script>
 	<script type="text/javascript" src="../scripts/invalid_links.js"></script>
 	<script type="text/javascript" src="../scripts/minecraft_links.js"></script>
+	<script type="text/javascript" src="../scripts/note.js"></script>
 	<script type="text/javascript" src="../scripts/small_screen.js"></script>
 </head>
 <body>
@@ -58,72 +60,162 @@
 		<div>
 			<h2>Spawning</h2>
 			<p>
-				The Ultimate apple cow may be obtained by breeding 2 <a href="enchanted_golden_apple_cow.html">Enchanted Golden Apple Cows</a> together at a 1 in 1000 chance. The "enableEnchantedAnimalBreeding" config option must be enabled.
+				The Ultimate apple cow may be obtained by breeding 2 <a href="enchanted_golden_apple_cow.html">Enchanted Golden Apple Cows</a> together at a 1 in 1000 chance.
 			</p>
 		</div>
 		<div>
 			<h2>Drops</h2>
+
+			<h3>On death</h3>
 			<p>
 				An adult ultimate apple cow drops:
 			</p>
+			<table style="text-align: center">
+				<tr>
+					<th colspan="2" rowspan="2">Item</th>
+					<th rowspan="2">Roll Chance</th>
+					<th colspan="4">Quantity (Roll Chance)</th>
+				</tr>
+				<tr>
+					<th>Default</th>
+					<th>Looting I</th>
+					<th>Looting II</th>
+					<th>Looting III</th>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Raw_Beef.png" alt="Invicon Raw Beef.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Raw Beef">Raw Beef</a><a data-note="1" class="note-1-return"><sup>[1]</sup></a></td>
+					<td>100%</td>
+					<td>1-10</td>
+					<td>2-11</td>
+					<td>3-12</td>
+					<td>4-13</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Leather.png" alt="Invicon Leather.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Leather">Leather</a></td>
+					<td>100%</td>
+					<td>1-5</td>
+					<td>2-6</td>
+					<td>3-7</td>
+					<td>4-8</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Apple.png" alt="Invicon Apple.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Apple">Apple</a></td>
+					<td>100%</td>
+					<td>3-6</td>
+					<td>4-7</td>
+					<td>5-8</td>
+					<td>6-9</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Golden_Apple.png" alt="Invicon Golden Apple.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Golden Apple">Golden Apple</a></td>
+					<td>100%</td>
+					<td>1-3</td>
+					<td>1-4</td>
+					<td>1-5</td>
+					<td>1-6</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Enchanted_Golden_Apple.gif" alt="Invicon Enchanted Golden Apple.gif" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Enchanted Golden Apple">Enchanted Golden Apple</a></td>
+					<td>100%</td>
+					<td>1</td>
+					<td>1-2</td>
+					<td>1-3</td>
+					<td>1-4</td>
+				</tr>
+				<tr>
+					<td><img src="../images/items/Ultimate_Apple.png" alt="Invicon Ultimate Apple.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a href="../items/ultimate_apple.html">Ultimate Apple</a></td>
+					<td>100%</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+					<td>1</td>
+				</tr>
+			</table>
+			<ol>
+				<li><span><a data-note="1-return" title="Jump up">↑</a></span><span class="note-1">Dropped as steak if on fire when killed.</span>
+			</ol>
 			<ul>
-				<li>1 to 10 <a data-minecraft="Raw Beef">raw beef</a> (or <a data-minecraft="Steak">steak</a> if killed while on fire), with a maximum amount is increased by 1 per level of <a data-minecraft="Looting">Looting</a>, for a maximum of 13 with Looting III.
-				<li>1 to 5 <a data-minecraft="Leather">leather</a>, with a maximum amount increased by 1 per level of <a data-minecraft="Looting">Looting</a>, for a maximum of 8 with Looting III.
-				<li>3 to 6 <a data-minecraft="Apple">apples</a>, with a maximum amount increased by 1 per level of <a data-minecraft="Looting">Looting</a>, for a maximum of 9 with Looting III.
-				<li>1 to 3 <a data-minecraft="Golden Apple">golden apples</a>, if killed by the <a data-minecraft="Player">player</a> or <a data-minecraft="Tamed Wolf">tamed wolf</a>.
-				<li>1 to 2 <a data-minecraft="Enchanted Golden Apple">enchanted golden apples</a>, if killed by the <a data-minecraft="Player">player</a> or <a data-minecraft="Tamed Wolf">tamed wolf</a>, with a maximum amount increased by 1 per level of <a data-minecraft="Looting">Looting</a>, for a maximum of 5 with Looting III.
-				<li>1 <a href="../items/ultimate_apple.html">ultimate apple</a>, if killed by the <a data-minecraft="Player">player</a> or <a data-minecraft="Tamed Wolf">tamed wolf</a>, with a maximum amount increased by 1 per level of <a data-minecraft="Looting">Looting</a>, for a maximum of 4 with Looting III.
+				<li>1-3 experience orbs are dropped when killed by a <a data-minecraft="Player">player</a> or <a data-minecraft="Tamed Wolf">tamed wolf</a>.
 			</ul>
 			<p>
 				Killing a calf yields no <a data-minecraft="Item">items</a> nor <a data-minecraft="Experience">experience</a>.
 			</p>
-		</div>
-		<!--
-		<div>
-			<h2>Behaviour</h2>
+			<h3>Milking</h3>
 			<p>
-				Placeholder Text
+				An adult ultimate apple cow can be <a data-minecraft="Milk">milked</a> by using a <a data-minecraft="Bucket">bucket</a> on it, yielding a <a data-minecraft="Milk Bucket">milk bucket</a>.
 			</p>
 		</div>
 		<div>
-			<h2>Sounds</h2>
+			<h2>Behaviour</h2>
 			<p>
-				Placeholder Text
+				An ultimate apple cow moos and huffs occasionally while wandering aimlessly, but tends to stay on well lit and grassy places. They avoid water unless following a player and always avoid <a data-minecraft="Rail">rails</a> and falls if it warrants <a data-minecraft="Damage">damage</a>. If harmed, ultimate apple cows flee for a few seconds.
+			</p>
+		</div>
+		<div>
+			<h2>Breeding</h2>
+			<p>
+				Unlike other cows, ultimate apple cows cannot be bred to get more ultimate apple cows.
 			</p>
 		</div>
 		<div>
 			<h2>Data Values</h2>
-			<p>
-				Placeholder Text
-			</p>
+			<h3>ID</h3>
+			<table style="text-align: center">
+				<tr>
+					<th>Name</th>
+					<th>Identifier</th>
+					<th>Translation key</th>
+				</tr>
+				<tr>
+					<td>Ultimate Apple Cow</td>
+					<td><code>ultimate_apple_cow</code></td>
+					<td><code>entity.chaosawakens.ultimate_apple_cow</code></td>
+				</tr>
+			</table>
 		</div>
 		<div>
 			<h2>Advancements</h2>
-			<p>
-				Placeholder Text
-			</p>
+			<table>
+				<tr>
+					<th>Icon</th>
+					<th>Advancement</th>
+					<th>In-game description</th>
+					<th>Parent</th>
+					<th>Actual requirements (if different)</th>
+					<th>Resource location</th>
+				</tr>
+				<tr>
+					<td>
+						<span class="plainlinks" style="display: inline-block; position: relative; width:52px; height:52px;">
+							<a href="../advancements/chaos_awakens.html">
+								<img alt="Advancement-plain-raw.png" src="https://minecraft.wiki/images/Advancement-plain-raw.png" width="52" height="52">
+							</a>
+							<span style="position:absolute; left:10px; top:10px; line-height:0">
+								<a href="../advancements/chaos_awakens.html">
+									<img alt="Invicon Golden Apple Cow Spawn Egg.png" src="../images/items/Golden_Apple_Cow_Spawn_Egg.png" width="32" height="32">
+								</a>
+							</span>
+						</span>
+					</td>
+					<td><bold>The Golden Child</bold></td>
+					<td>Breed an Ultimate Apple Cow from 2 Enchanted Golden Apple Cows.</td>
+					<td>Shiny Cows!</td>
+					<td>
+						Breed a pair of <a href="../entities/enchanted_golden_apple_cow.html">Enchanted Golden Apple Cows</a> and get an offspring of an <bold>Ultimate Apple Cow</bold>
+					</td>
+					<td><code>chaosawakens:root/the_golden_child</code></td>
+				</tr>
+			</table>
 		</div>
-		<div>
-			<h2>History</h2>
-			<p>
-				Placeholder Text
-			</p>
-		</div>
-		<div>
-			<h2>Issues</h2>
-			<p>
-				Placeholder Text
-			</p>
-		</div>
-		<div>
-			<h2>Trivia</h2>
-			<p>
-				Placeholder Text
-			</p>
-		</div>
-		-->
+		<h2>Gallery</h2>
+		<p class="extra-information">Appears enchanted in-game.</p>
 		<div class="gallery">
-			<h2>Gallery</h2>
 			<div class="gallery-container">
 				<div class="image-container">
 					<img src="../images/entities/Ultimate_Apple_Cow.gif" alt="Ultimate Apple Cow Idle Animation">
@@ -135,7 +227,43 @@
 				</div>
 			</div>
 		</div>
-		<br><br>
+		<br>
+		<br>
+		<div>
+			<h2>History</h2>
+			<table style="text-align: center">
+				<tr>
+					<th colspan="2">
+						Chaos Awakens Version
+					</th>
+				</tr>
+				<tr>
+					<th>
+						0.11.0.0
+					</th>
+					<td style="text-align: left">
+						Added Ultimate Apple Cow. <br>
+						<img src="../images/entities/pre0.12/Ultimate_Apple_Cow.gif" alt="Ultimate Apple Cow Idle Animation. Prior to version 0.12.0.0" width="96px">
+						<img src="../images/entities/pre0.12/Ultimate_Apple_Cow_(Walking).gif" alt="Ultimate Apple Cow Walking Animation. Prior to version 0.12.0.0" width="96px">
+					</td>
+				</tr>
+				<tr>
+					<th rowspan="2">
+						0.12.0.0
+					</th>
+					<td style="text-align: left">
+						Updated Ultimate Apple Cow model and texture. <br>
+						<img src="../images/entities/Ultimate_Apple_Cow.gif" alt="Ultimate Apple Cow Idle Animation. Since version 0.12.0.0" width="96px">
+						<img src="../images/entities/Ultimate_Apple_Cow_(Walking).gif" alt="Ultimate Apple Cow Walking Animation. Since version 0.12.0.0" width="96px">
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: left">
+						Ultimate Apple Cow can now be bred when the "enableEnchantedAnimalBreeding" config value is set to false (default value).
+					</td>
+				</tr>
+			</table>
+		</div>
 		<div>
 			<h3 class="categories-heading">Categories</h3>
 				<ul class="categories-inner">
@@ -229,7 +357,6 @@
 				<div class="information-stats-grid-slot information-stats-grid-slot-8-2">
 					<p>
 						- <a data-minecraft="Bucket">Bucket</a><br>
-						- <a data-minecraft="Wheat">Wheat</a><br>
 						- <a data-minecraft="Lead">Lead</a>
 					</p>
 				</div>
