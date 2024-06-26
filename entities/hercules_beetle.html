@@ -11,18 +11,26 @@
 	<link rel="stylesheet" href="../styles/main_section.css">
 	<link rel="stylesheet" href="../styles/information.css">
 	<link rel="stylesheet" href="../styles/crafting_recipe.css">
+	<link rel="stylesheet" href="../styles/hover_gallery.css">
 	<script type="text/javascript" src="../scripts/header.js"></script>
 	<script type="text/javascript" src="../scripts/replace_variables.js"></script>
 	<script type="text/javascript" src="../scripts/chaos_awakens_wiki_links.js"></script>
 	<script type="text/javascript" src="../scripts/invalid_links.js"></script>
 	<script type="text/javascript" src="../scripts/minecraft_links.js"></script>
 	<script type="text/javascript" src="../scripts/small_screen.js"></script>
+	<script type="text/javascript" src="../scripts/scrollable_elements.js"></script>
 </head>
 <body>
 <script>
 	health = 250;
-	armor = 10;
-	attack_damage = 10;
+	armor = 20;
+	base_attack_damage = 25;
+	mad_munch_attack_damage = 10;
+	attack_speed = 10;
+	movement_speed = 0.35;
+	flying_speed = 0.42;
+	knockback_resistance = 0.8;
+	follow_range = 40;
 </script>
 <div class="page-header">
 	<a href="https://chaosawakens.github.io/">
@@ -131,20 +139,36 @@
 			<h2>Gallery</h2>
 			<div class="gallery-container">
 				<div class="image-container">
-					<img src="../images/entities/Hercules_Beetle.gif" alt="Hercules Beetle Idle Animation">
+					<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_docile.gif" alt="Hercules Beetle Docile Animation">
+					<div class="image-name">Docile Animation</div>
+				</div>
+				<div class="image-container">
+					<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_awaken.gif" alt="Hercules Beetle Awakening Animation">
+					<div class="image-name">Awakening Animation</div>
+				</div>
+				<div class="image-container">
+					<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_idle.gif" alt="Hercules Beetle Idle Animation">
 					<div class="image-name">Idle Animation</div>
 				</div>
 				<div class="image-container">
-					<img src="../images/entities/Hercules_Beetle_(Awakening).gif" alt="Hercules Beetle Awakening Animation">
-					<div class="image-name image-name-long">Awakening Animation</div>
-				</div>
-				<div class="image-container">
-					<img src="../images/entities/Hercules_Beetle_(Death).gif" alt="Hercules Beetle Death Animation">
-					<div class="image-name">Death Animation</div>
-				</div>
-				<div class="image-container">
-					<img src="../images/entities/Hercules_Beetle_(Walking).gif" alt="Hercules Beetle Walking Animation">
+					<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_walk.gif" alt="Hercules Beetle Walking Animation">
 					<div class="image-name">Walking Animation</div>
+				</div>
+				<div class="image-container">
+					<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_beetle_ram.gif" alt="Hercules Beetle Beetle Ram Attack Animation">
+					<div class="image-name">Beetle Ram Animation</div>
+				</div>
+				<div class="image-container">
+					<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_mad_munch.gif" alt="Hercules Beetle Mad Munch Attack Animation">
+					<div class="image-name">Mad Munch Animation</div>
+				</div>
+				<div class="image-container">
+					<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_defense_mechanism.gif" alt="Hercules Beetle Defense Mechanism (Roar) Animation">
+					<div class="image-name-large">Defense Mechanism Animation</div>
+				</div>
+				<div class="image-container">
+					<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_death.gif" alt="Hercules Beetle Death Animation">
+					<div class="image-name">Death Animation</div>
 				</div>
 			</div>
 		</div>
@@ -162,15 +186,31 @@
 			<p class="information-name information-name-item">${name}</p>
 			<img class="information-image information-item"
 				 id="information-image"
-				 src="../images/entities/Hercules_Beetle.gif"
-				 alt="Hercules Beetle Idle Gif">
+				 src="../images/entities/0.12/hercules_beetle/hercules_beetle_idle.gif"
+				 alt="Hercules Beetle Idle Animation">
 			<span class="information-spawn-egg information-item">
 				Spawn Egg
-				<span class="invslot">
-					<img class="information-spawn-egg-image"
-						 src="../images/items/Hercules_Beetle_Spawn_Egg.png"
-						 alt="Hercules Beetle Spawn Egg">
-				</span>
+				<div class="image-container" id="def-spawn-egg">
+					<span class="invslot active">
+						<img class="information-spawn-egg-image"
+							 src="../images/items/0.12/spawn_eggs/hercules_beetle_spawn_egg.png"
+							 alt="Hercules Beetle Spawn Egg (Current)">
+					</span>
+			<!-- TODO Redo this goofy ahh
+					<div class="hover-gallery" id="spawn-eggs">
+						<span class="invslot active">
+							<img class="information-spawn-egg-image"
+								 src="../images/items/0.12/spawn_eggs/hercules_beetle_spawn_egg.png"
+								 alt="Hercules Beetle Spawn Egg (0.12)">
+						</span>
+						<span class="invslot">
+							<img class="information-spawn-egg-image"
+								 src="../images/items/0.7/spawn_eggs/hercules_beetle_spawn_egg.png"
+								 alt="Hercules Beetle Spawn Egg (0.7)">
+						</span>
+					</div>
+					-->
+				</div>
 			</span>
 			<p class="information-stats-banner information-stats-banner-item">Entity Information</p>
 			<div class="information-stats-grid">
@@ -205,7 +245,7 @@
 					</div>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-4-2">
-					Boss
+					Mini-Boss
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-5-1">
 					<div class="line-break-center">
@@ -214,8 +254,8 @@
 					</div>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-5-2">
-					Height: 4.5 Blocks <br>
-					Width: 1.925 Blocks
+					Width: 4.5 Blocks <br>
+					Height: 1.925 Blocks
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-6-1">
 					<div class="line-break-center">
@@ -224,7 +264,10 @@
 					</div>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-6-2">
-					${attack_damage}
+					<div class="line-break-center">
+						Beetle Ram Attack: ${base_attack_damage} <br>
+						Mad Munch Attack: ${mad_munch_attack_damage}
+					</div>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-7-1">
 					<div class="line-break-center">
@@ -233,7 +276,7 @@
 					</div>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-7-2">
-					10
+					${attack_speed}
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-8-1">
 					<div class="line-break-center">
@@ -242,7 +285,7 @@
 					</div>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-8-2">
-					0.6
+					${knockback_resistance}
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-9-1">
 					<div class="line-break-center">
@@ -251,8 +294,8 @@
 					</div>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-9-2">
-					Grounded: 0.25<br>
-					Flying: 0.37
+					Grounded: ${movement_speed}<br>
+					Flying: ${flying_speed}
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-10-1">
 					<div class="line-break-center">
@@ -261,7 +304,7 @@
 					</div>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-10-2">
-					40
+					${follow_range}
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-11-1">
 					<div class="line-break-center">

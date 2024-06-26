@@ -79,6 +79,9 @@
 .information-spawn-egg-image {
 	margin-right: 25px;
 	width: 32px;
+	display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .information-stats-banner {
