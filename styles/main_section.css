@@ -44,18 +44,19 @@ h3.categories-heading {
 }
 
 .gallery {
-	text-align: center;
+	display: flex;
 }
 
 .gallery-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	column-gap: 10px;
-	row-gap: 35px;
+	grid-auto-rows: max-content;
 }
 
 .image-container {
 	position: relative;
+	display: inline-block;
 }
 
 .image-container img {
@@ -66,15 +67,11 @@ h3.categories-heading {
 }
 
 .image-name {
-	position: absolute;
-	bottom: -30px;
-	left: 0;
+	position: static;
+	margin-top: 4px;
+	margin-bottom: 4px;
 	width: 100%;
 	text-align: center;
-}
-
-.image-name-long {
-	bottom: -55px;
 }
 
 table {

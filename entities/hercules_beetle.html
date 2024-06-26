@@ -24,8 +24,8 @@
 <script>
 	health = 250;
 	armor = 20;
-	base_attack_damage = 25;
-	mad_munch_attack_damage = 10;
+	attack_damage = 25;
+	attack1_damage = 10;
 	attack_speed = 10;
 	movement_speed = 0.35;
 	flying_speed = 0.42;
@@ -74,22 +74,109 @@
 		</div>
 		<div>
 			<h2>Drops</h2>
+			<h3>On death</h3>
 			<p>
 				A Hercules Beetle drops:
 			</p>
-			<ul>
-				<li>1 <a href="../items/big_hammer.html">Big Hammer</a>.
-				<li>1 piece of <a data-minecraft="Enchanting">enchanted</a> <a href="../items/diamond.html">diamond</a> <a data-minecraft="Armor">armor</a>.
-				<li>1 to 3 pieces of <a data-minecraft="Enchanting">enchanted</a> <a href="../items/tiger's_eye.html">tiger's eye</a> <a data-minecraft="Armor">armor</a>.
-				<li>1 to 2 of the following gemstones:
-					<ul>
-						<li><a href="../items/diamond.html">Diamonds</a>
-						<li><a href="../items/emerald.html">Emeralds</a>
-						<li><a href="../items/tiger's_eye.html">Tiger's Eyes</a>
-						<li><a href="../items/amethyst.html">Amethysts</a>
-						<li><a href="../items/ruby.html">Rubies</a>
-					</ul>
-			</ul>
+			<table style="text-align: center">
+				<tr>
+					<th colspan="2" rowspan="2">Item</th>
+					<th rowspan="2">Rolls</th>
+					<th rowspan="2">Roll Chance</th>
+					<th colspan="4">Quantity (Roll Chance)</th>
+				</tr>
+				<tr>
+					<th>Default</th>
+				</tr>
+				<tr>
+					<td><img src="../images/items/Big_Hammer.png" alt="Invicon Big Hammer.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a href="../items/big_hammer.html">Big Hammer</a></td>
+					<td>1</td>
+					<td>100%</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Diamond_Helmet.png" alt="Invicon Diamond Helmet.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Diamond Helmet">Diamond Helmet</a></td>
+					<td rowspan="4">1</td>
+					<td>25%</td>
+					<td>0-1</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Diamond_Chestplate.png" alt="Invicon Diamond Chestplate.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Diamond Chestplate">Diamond Chestplate</a></td>
+					<td>25%</td>
+					<td>0-1</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Diamond_Leggings.png" alt="Invicon Diamond Leggings.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Diamond Leggings">Diamond Leggings</a></td>
+					<td>25%</td>
+					<td>0-1</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Diamond_Boots.png" alt="Invicon Diamond Boots.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Diamond Boots">Diamond Boots</a></td>
+					<td>25%</td>
+					<td>0-1</td>
+				</tr>
+				<tr>
+					<td><img src="../images/items/Tigers_Eye_Helmet.png" alt="Invicon Tiger's Eye Helmet.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a href="../items/tigers_eye_helmet.html">Tiger's Eye Helmet</a></td>
+					<td rowspan="4">1-3</td>
+					<td>25%</td>
+					<td>0-3</td>
+				</tr>
+				<tr>
+					<td><img src="../images/items/Tigers_Eye_Chestplate.png" alt="Invicon Tiger's Eye Chestplate.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a href="../items/tigers_eye_chestplate.html">Tiger's Eye Chestplate</a></td>
+					<td>25%</td>
+					<td>0-3</td>
+				</tr>
+				<tr>
+					<td><img src="../images/items/Tigers_Eye_Leggings.png" alt="Invicon Tiger's Eye Leggings.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a href="../items/tigers_eye_leggings.html">Tiger's Eye Leggings</a></td>
+					<td>25%</td>
+					<td>0-3</td>
+				</tr>
+				<tr>
+					<td><img src="../images/items/Tigers_Eye_Boots.png" alt="Invicon Tigers Eye Boots.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a href="../items/tigers_eye_boots.html">Tigers Eye Boots</a></td>
+					<td>25%</td>
+					<td>0-3</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Diamond.png" alt="Invicon Diamond.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Diamond">Diamond</a></td>
+					<td rowspan="5">1-2</td>
+					<td>??%</td>
+					<td>0-2</td>
+				</tr>
+				<tr>
+					<td><img src="https://minecraft.wiki/images/Invicon_Emerald.png" alt="Invicon Emerald.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a data-minecraft="Emerald">Emerald</a></td>
+					<td>??%</td>
+					<td>0-2</td>
+				</tr>
+				<tr>
+					<td><img src="../images/items/Tigers_Eye.png" alt="Invicon Tiger's Eye.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a href="../items/tigers_eye.html">Tiger's Eye</a></td>
+					<td>??%</td>
+					<td>0-2</td>
+				</tr>
+				<tr>
+					<td><img src="../images/items/Amethyst.png" alt="Invicon Amethyst.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a href="../items/amethyst.html">Amethyst</a></td>
+					<td>??%</td>
+					<td>0-2</td>
+				</tr>
+				<tr>
+					<td><img src="../images/items/Ruby.png" alt="Invicon Ruby.png" width="32px" height="32px"></td>
+					<td style="text-align: left"><a href="../items/ruby.html">Ruby</a></td>
+					<td>??%</td>
+					<td>0-2</td>
+				</tr>
+			</table>
 		</div>
 		<!--
 		<div>
@@ -104,39 +191,70 @@
 				Placeholder Text
 			</p>
 		</div>
+		-->
 		<div>
 			<h2>Data Values</h2>
-			<p>
-				Placeholder Text
-			</p>
+			<h3>ID</h3>
+			<table style="text-align: center">
+				<tr>
+					<th>Name</th>
+					<th>Identifier</th>
+					<th>Translation key</th>
+				</tr>
+				<tr>
+					<td>Hercules Beetle</td>
+					<td><code>hercules_beetle</code></td>
+					<td><code>entity.chaosawakens.hercules_beetle</code></td>
+				</tr>
+				<tr>
+					<td>Throwback Hercules Beetle</td>
+					<td><code>throwback_hercules_beetle</code></td>
+					<td><code>entity.chaosawakens.throwback_hercules_beetle</code></td>
+				</tr>
+			</table>
 		</div>
 		<div>
 			<h2>Advancements</h2>
-			<p>
-				Placeholder Text
-			</p>
+			<table>
+				<tr>
+					<th>Icon</th>
+					<th>Advancement</th>
+					<th>In-game description</th>
+					<th>Parent</th>
+					<th>Actual requirements (if different)</th>
+					<th>Resource location</th>
+				</tr>
+				<tr>
+					<td>
+						<span class="plainlinks" style="display: inline-block; position: relative; width:52px; height:52px;">
+							<a href="../advancements/chaos_awakens.html">
+								<img alt="Advancement-plain-raw.png" src="https://minecraft.wiki/images/Advancement-plain-raw.png" width="52" height="52">
+							</a>
+							<span style="position:absolute; left:10px; top:10px; line-height:0">
+								<a href="../advancements/chaos_awakens.html">
+									<img alt="Invicon Dead Stink Bug.png" src="../images/items/Dead_Stink_Bug.png" width="32" height="32">
+								</a>
+							</span>
+						</span>
+					</td>
+					<td><bold>Bug Squasher!</bold></td>
+					<td>Kill every Bug from Chaos Awakens.</td>
+					<td>Chaos Awakens</td>
+					<td>
+						Kill all of these mobs:
+						<ul>
+							<li><bold>Hercules Beetle</bold></li>
+							<li><bold>Throwback Hercules Beetle</bold></li>
+							<li><a href="../entities/ruby_bug.html">Ruby Bug</a></li>
+							<li><a href="../entities/stink_bug.html">Stink Bug</a></li>
+						</ul>
+					</td>
+					<td><code>chaosawakens:root/bug_squasher</code></td>
+				</tr>
+			</table>
 		</div>
-		<div>
-			<h2>History</h2>
-			<p>
-				Placeholder Text
-			</p>
-		</div>
-		<div>
-			<h2>Issues</h2>
-			<p>
-				Placeholder Text
-			</p>
-		</div>
-		<div>
-			<h2>Trivia</h2>
-			<p>
-				Placeholder Text
-			</p>
-		</div>
-		-->
+		<h2>Gallery</h2>
 		<div class="gallery">
-			<h2>Gallery</h2>
 			<div class="gallery-container">
 				<div class="image-container">
 					<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_docile.gif" alt="Hercules Beetle Docile Animation">
@@ -164,7 +282,7 @@
 				</div>
 				<div class="image-container">
 					<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_defense_mechanism.gif" alt="Hercules Beetle Defense Mechanism (Roar) Animation">
-					<div class="image-name-large">Defense Mechanism Animation</div>
+					<div class="image-name">Defense Mechanism Animation</div>
 				</div>
 				<div class="image-container">
 					<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_death.gif" alt="Hercules Beetle Death Animation">
@@ -172,8 +290,39 @@
 				</div>
 			</div>
 		</div>
-		<br><br>
-		<br><br>
+		<br>
+		<br>
+		<br>
+		<div>
+			<h2>History</h2>
+			<table style="text-align: center">
+				<tr>
+					<th colspan="2">
+						Chaos Awakens Version
+					</th>
+				</tr>
+				<tr>
+					<th>
+						0.7
+					</th>
+					<td style="text-align: left">
+						Added Hercules Beetle. <br>
+						<img src="../images/entities/0.7/hercules_beetle/hercules_beetle_idle.gif" alt="Hercule Beetle Idle Animation. From 0.7" width="96px">
+						<img src="../images/entities/0.7/hercules_beetle/hercules_beetle_walk.gif" alt="Hercule Beetle Walking Animation. From 0.7" width="96px">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						0.12.0.0
+					</th>
+					<td style="text-align: left">
+						Updated Hercules Beetle model and texture. <br>
+						<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_idle.gif" alt="Hercule Beetle Idle Animation. Since version 0.12.0.0" width="96px">
+						<img src="../images/entities/0.12/hercules_beetle/hercules_beetle_walk.gif" alt="Hercule Beetle Walking Animation. Since version 0.12.0.0" width="96px">
+					</td>
+				</tr>
+			</table>
+		</div>
 		<div>
 			<h3 class="categories-heading">Categories</h3>
 			<ul class="categories-inner">
@@ -196,7 +345,7 @@
 							 src="../images/items/0.12/spawn_eggs/hercules_beetle_spawn_egg.png"
 							 alt="Hercules Beetle Spawn Egg (Current)">
 					</span>
-			<!-- TODO Redo this goofy ahh
+			<!-- TODO: Redo this goofy ahh
 					<div class="hover-gallery" id="spawn-eggs">
 						<span class="invslot active">
 							<img class="information-spawn-egg-image"
@@ -265,8 +414,8 @@
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-6-2">
 					<div class="line-break-center">
-						Beetle Ram Attack: ${base_attack_damage} <br>
-						Mad Munch Attack: ${mad_munch_attack_damage}
+						Beetle Ram Attack:<br>${attack_damage} <br>
+						Mad Munch Attack:<br>${attack1_damage}
 					</div>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-7-1">

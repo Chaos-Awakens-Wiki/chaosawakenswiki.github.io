@@ -20,7 +20,7 @@
 		} else {
 			newHealth = health + " (" + heartCount + " x " + healthIcon + ")"
 		}
-		htmlContent = htmlContent.replace(/\${health}/g, newHealth);
+		htmlContent = htmlContent.replace(/\${health}/g, "<span>" + newHealth + "</span>");
 	}
 
 	const armorIcon = `<img class="stat-icon" src="../images/misc/Armor.svg" alt="Armor">`
@@ -38,16 +38,14 @@
 		} else {
 			newArmor = armor + " (" + armorCount + " x " + armorIcon + ")"
 		}
-		htmlContent = htmlContent.replace(/\${armor}/g, newArmor);
+		htmlContent = htmlContent.replace(/\${armor}/g, "<span>" + newArmor + "</span>");
 	}
-
-	document.body.innerHTML = htmlContent
 
 	let newAttackDamage;
 	if (parent.attack_damage) {
+		const attack_damage = parent.attack_damage;
+		const attackDamageCount = attack_damage / 2;
 		if (parent.attack_damage <= 10) {
-			const attack_damage = parent.attack_damage;
-			const attackDamageCount = attack_damage / 2;
 			if (attack_damage % 2 === 0) {
 				newAttackDamage = attack_damage + " (" + repeatString(attackDamageCount, healthIcon) + ")"
 			} else {
@@ -57,7 +55,64 @@
 			newAttackDamage = attack_damage + " (" + attackDamageCount + " x " + healthIcon + ")"
 		}
 	}
-	htmlContent = htmlContent.replace(/\${attack_damage}/g, newAttackDamage);
+	htmlContent = htmlContent.replace(/\${attack_damage}/g, "<span>" + newAttackDamage + "</span>");
+
+	let newAttackNumberDamage;
+	for (let i = 1; i <= 10; i++) {
+		const attack_damage_key = `attack${i}_damage`;
+		const attack_damage = parent[attack_damage_key]
+		if (attack_damage) {
+			const attackDamageCount = attack_damage / 2;
+			if (attack_damage <= 10) {
+				if (attack_damage % 2 === 0) {
+					newAttackNumberDamage = attack_damage + " (" + repeatString(attackDamageCount, healthIcon) + ")"
+				} else {
+					newAttackNumberDamage = attack_damage + " (" + repeatString(attackDamageCount - 1, healthIcon) + halfHealthIcon + ")"
+				}
+			} else {
+				newAttackNumberDamage = attack_damage + " (" + attackDamageCount + " x " + healthIcon + ")"
+			}
+			let placeholder = new RegExp(`${attack_damage_key}`);
+			let placeholderDown = placeholder.toString().replaceAll('/', '').replaceAll('\\', '')
+			htmlContent = htmlContent.replace("${" + placeholderDown + "}", "<span>" + newAttackDamage + "</span>");
+			
+		}
+	}
+
+	let newAttackSpeed;
+	if (parent.attack_speed) {
+		const attack_speed = parent.attack_speed;
+		newAttackSpeed = attack_speed
+	}
+	htmlContent = htmlContent.replace(/\${attack_speed}/g, newAttackSpeed);
+
+	let newMovementSpeed;
+	if (parent.movement_speed) {
+		const movement_speed = parent.movement_speed;
+		newMovementSpeed = movement_speed
+	}
+	htmlContent = htmlContent.replace(/\${movement_speed}/g, newMovementSpeed);
+
+	let newFlyingSpeed;
+	if (parent.flying_speed) {
+		const flying_speed = parent.flying_speed;
+		newFlyingSpeed = flying_speed
+	}
+	htmlContent = htmlContent.replace(/\${flying_speed}/g, newFlyingSpeed);
+
+	let newKnockbackResistance;
+	if (parent.knockback_resistance) {
+		const knockback_resistance = parent.knockback_resistance;
+		newKnockbackResistance = knockback_resistance
+	}
+	htmlContent = htmlContent.replace(/\${knockback_resistance}/g, newKnockbackResistance);
+
+	let newFollowRange;
+	if (parent.follow_range) {
+		const follow_range = parent.follow_range;
+		newFollowRange = follow_range
+	}
+	htmlContent = htmlContent.replace(/\${follow_range}/g, newFollowRange);
 
 	document.body.innerHTML = htmlContent
 });
