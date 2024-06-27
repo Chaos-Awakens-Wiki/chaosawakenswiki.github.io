@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="../styles/information.css">
 	<link rel="stylesheet" href="../styles/crafting_recipe.css">
 	<script type="text/javascript" src="../scripts/header.js"></script>
-	<script type="text/javascript" src="../scripts/replace_variables.js"></script>
+	<script type="text/javascript" src="../scripts/replace_block_variables.js"></script>
 	<script type="text/javascript" src="../scripts/chaos_awakens_wiki_links.js"></script>
 	<script type="text/javascript" src="../scripts/invalid_links.js"></script>
 	<script type="text/javascript" src="../scripts/minecraft_links.js"></script>
@@ -20,6 +20,10 @@
 	<script type="text/javascript" src="../scripts/rotating_images.js"></script>
 </head>
 <body>
+<script>
+	tool_type = "pickaxe";
+	tool_level = 4;
+</script>
 <div class="page-header">
 	<a href="https://chaosawakens.github.io/">
 		<img class="chaos-awakens-logo" src="../images/logo.png" alt="Chaos Awakens Logo">
@@ -176,7 +180,7 @@
 					</div>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-3-2">
-					<span class="sprite inv-sprite" title="An amethyst pickaxe, tiger's eye pickaxe or better is required to mine this block" data-images="../images/items/Amethyst_Pickaxe.png,../images/items/Tigers_Eye_Pickaxe.png" style="background: url(../images/items/Amethyst_Pickaxe.png); background-size: 32px 32px;"></span>
+					${tool_level}
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-4-1">
 					<div class="line-break-center">
