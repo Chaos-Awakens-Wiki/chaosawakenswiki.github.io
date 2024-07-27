@@ -159,3 +159,38 @@ ul.block-list > li {
 		-moz-columns: 1;
 	}
 }
+
+.four-columns {
+	columns: 4;
+	-webkit-columns: 4;
+	-moz-columns: 4;
+	max-width: max-content;
+}
+
+.four-columns > li {
+	width: 100%
+}
+
+@media (max-width: 1200px) {
+	.four-columns {
+		columns: 3;
+		-webkit-columns: 3;
+		-moz-columns: 3;
+	}
+}
+
+@media (max-width: 925px) {
+	.four-columns {
+		columns: 2;
+		-webkit-columns: 2;
+		-moz-columns: 2;
+	}
+}
+
+@media (max-width: 650px) {
+	.four-columns {
+		columns: 1;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+	}
+}

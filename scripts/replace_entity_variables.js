@@ -5,8 +5,8 @@
 	const newName = title.replace(" | Chaos Awakens Wiki", "");
 	htmlContent = htmlContent.replace(/\${name}/g, newName);
 
-	const healthIcon = `<img class="stat-icon" src="../images/misc/Heart.svg" alt="Heart">`
-	const halfHealthIcon = `<img class="stat-icon" src="../images/misc/Half_Heart.svg" alt="Heart">`
+	const healthIcon = `<img class="stat-icon" camisc-src="Heart" alt="Heart">`
+	const halfHealthIcon = `<img class="stat-icon" camisc-src="Half_Heart" alt="Heart">`
 	let newHealth;
 	if (parent.health) {
 		const health = parent.health;
@@ -23,8 +23,8 @@
 		htmlContent = htmlContent.replace(/\${health}/g, "<span>" + newHealth + "</span>");
 	}
 
-	const armorIcon = `<img class="stat-icon" src="../images/misc/Armor.svg" alt="Armor">`
-	const halfArmorIcon = `<img class="stat-icon" src="../images/misc/Half_Armor.svg" alt="Armor">`
+	const armorIcon = `<img class="stat-icon" camisc-src="Armor" alt="Armor">`
+	const halfArmorIcon = `<img class="stat-icon" camisc-src="Half_Armor" alt="Armor">`
 	let newArmor;
 	if (parent.armor) {
 		const armor = parent.armor;
