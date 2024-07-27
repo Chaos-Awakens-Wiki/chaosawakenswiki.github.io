@@ -22,6 +22,12 @@
 <body>
 <script>
 	health = 10;
+	movement_speed = 0.2;
+	follow_range = 10;
+	width = 1.4;
+	height = 0.9;
+	width_baby = 0.7;
+	height_baby = 0.45;
 </script>
 <div class="page-header">
 	<a href="https://chaosawakens.github.io/">
@@ -256,11 +262,11 @@
 		<p class="extra-information">Appears enchanted in-game.</p>
 		<div class="gallery">
 			<div class="gallery-container">
-				<div class="image-container">
+				<div class="gallery-image-container">
 					<img src="../images/entities/Golden_Apple_Cow.gif" alt="Enchanted Golden Apple Cow Idle Animation">
 					<div class="image-name">Idle Animation</div>
 				</div>
-				<div class="image-container">
+				<div class="gallery-image-container">
 					<img src="../images/entities/Golden_Apple_Cow_(Walking).gif" alt="Enchanted Golden Apple Cow Walking Animation">
 					<div class="image-name">Walking Animation</div>
 				</div>
@@ -356,11 +362,11 @@
 				<div class="information-stats-grid-slot information-stats-grid-slot-4-2">
 					<p class="normal">
 						<b>Adult:</b> <br>
-						Height: 1.4 Blocks <br>
-						Width: 0.9 Blocks <br>
+						${height} <br>
+						${width} <br>
 						<b>Baby:</b> <br>
-						Height: 0.7 Blocks <br>
-						Width: 0.45 Blocks
+						${height_baby} <br>
+						${width_baby}
 					</p>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-5-1">
@@ -370,7 +376,7 @@
 					</div>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-5-2">
-					0.2
+					${movement_speed}
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-6-1">
 					<div class="line-break-center">
@@ -379,7 +385,7 @@
 					</div>
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-6-2">
-					10
+					${follow_range}
 				</div>
 				<div class="information-stats-grid-slot information-stats-grid-slot-7-1">
 					<div class="line-break-center">

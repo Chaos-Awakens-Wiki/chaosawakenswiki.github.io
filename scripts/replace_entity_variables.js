@@ -81,38 +81,61 @@
 
 	let newAttackSpeed;
 	if (parent.attack_speed) {
-		const attack_speed = parent.attack_speed;
-		newAttackSpeed = attack_speed
+		newAttackSpeed = parent.attack_speed
 	}
 	htmlContent = htmlContent.replace(/\${attack_speed}/g, newAttackSpeed);
 
 	let newMovementSpeed;
 	if (parent.movement_speed) {
-		const movement_speed = parent.movement_speed;
-		newMovementSpeed = movement_speed
+		newMovementSpeed = parent.movement_speed
 	}
 	htmlContent = htmlContent.replace(/\${movement_speed}/g, newMovementSpeed);
 
 	let newFlyingSpeed;
 	if (parent.flying_speed) {
-		const flying_speed = parent.flying_speed;
-		newFlyingSpeed = flying_speed
+		newFlyingSpeed = parent.flying_speed
 	}
 	htmlContent = htmlContent.replace(/\${flying_speed}/g, newFlyingSpeed);
 
 	let newKnockbackResistance;
 	if (parent.knockback_resistance) {
-		const knockback_resistance = parent.knockback_resistance;
-		newKnockbackResistance = knockback_resistance
+		newKnockbackResistance = parent.knockback_resistance
 	}
 	htmlContent = htmlContent.replace(/\${knockback_resistance}/g, newKnockbackResistance);
 
 	let newFollowRange;
 	if (parent.follow_range) {
-		const follow_range = parent.follow_range;
-		newFollowRange = follow_range
+		newFollowRange = parent.follow_range
 	}
 	htmlContent = htmlContent.replace(/\${follow_range}/g, newFollowRange);
+
+	let newWidth;
+	if (parent.width) {
+		const width = parent.width;
+		newWidth = "Width: " + width + " Blocks"
+	}
+	htmlContent = htmlContent.replace(/\${width}/g, newWidth);
+
+	let newHeight;
+	if (parent.height) {
+		const height = parent.height;
+		newHeight = "Height: " + height + " Blocks"
+	}
+	htmlContent = htmlContent.replace(/\${height}/g, newHeight);
+
+	let newWidthBaby;
+	if (parent.width_baby) {
+		const width_baby = parent.width_baby;
+		newWidthBaby = "Width: " + width_baby + " Blocks"
+	}
+	htmlContent = htmlContent.replace(/\${width_baby}/g, newWidthBaby);
+
+	let newHeightBaby;
+	if (parent.height_baby) {
+		const height_baby = parent.height_baby;
+		newHeightBaby = "Height: " + height_baby + " Blocks"
+	}
+	htmlContent = htmlContent.replace(/\${height_baby}/g, newHeightBaby);
 
 	document.body.innerHTML = htmlContent
 });
