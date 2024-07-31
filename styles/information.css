@@ -77,8 +77,10 @@
 }
 
 .information-spawn-egg-image {
-	margin-right: 25px;
 	width: 32px;
+	display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .information-stats-banner {
@@ -128,4 +130,15 @@
 	position: relative;
 	padding: 0;
 	margin: 0;
+}
+
+.hover-gallery {
+	display: none;
+	position: absolute;
+	bottom: 100%;
+	z-index: 1;
+}
+
+.image-container:hover .hover-gallery {
+	display: flex;
 }

@@ -12,11 +12,12 @@
 	<link rel="stylesheet" href="../styles/information.css">
 	<link rel="stylesheet" href="../styles/crafting_recipe.css">
 	<script type="text/javascript" src="../scripts/header.js"></script>
-	<script type="text/javascript" src="../scripts/replace_variables.js"></script>
+	<script type="text/javascript" src="../scripts/replace_entity_variables.js"></script>
 	<script type="text/javascript" src="../scripts/chaos_awakens_wiki_links.js"></script>
 	<script type="text/javascript" src="../scripts/invalid_links.js"></script>
 	<script type="text/javascript" src="../scripts/minecraft_links.js"></script>
 	<script type="text/javascript" src="../scripts/small_screen.js"></script>
+	<script type="text/javascript" src="../scripts/quicker_image_links.js"></script>
 </head>
 <body>
 <script>
@@ -24,7 +25,7 @@
 </script>
 <div class="page-header">
 	<a href="https://chaosawakens.github.io/">
-		<img class="chaos-awakens-logo" src="../images/logo.png" alt="Chaos Awakens Logo">
+		<img class="chaos-awakens-logo" src="../images/chaos_awakens.png" alt="Chaos Awakens Logo">
 	</a>
 	<ul class="navigation">
 		<li><a href="../entities.html">Entities</a></li>
@@ -131,12 +132,12 @@
 		<div class="gallery">
 			<h2>Gallery</h2>
 			<div class="gallery-container">
-				<div class="image-container">
-					<img src="../images/entities/Apple_Cow.gif" alt="Apple Cow Idle Animation">
+				<div class="gallery-image-container">
+					<img caentity-src="Apple_Cow" alt="Apple Cow Idle Animation">
 					<div class="image-name">Idle Animation</div>
 				</div>
-				<div class="image-container">
-					<img src="../images/entities/Apple_Cow_(Walking).gif" alt="Apple Cow Walking Animation">
+				<div class="gallery-image-container">
+					<img caentity-src="Apple_Cow_(Walking)" alt="Apple Cow Walking Animation">
 					<div class="image-name">Walking Animation</div>
 				</div>
 			</div>
@@ -154,13 +155,13 @@
 			<p class="information-name information-name-item">${name}</p>
 			<img class="information-image information-item"
 				 id="information-image"
-				 src="../images/entities/Apple_Cow.gif"
+				 caentity-src="Apple_Cow"
 				 alt="Apple Cow Idle Gif">
 			<span class="information-spawn-egg information-item">
 				Spawn Egg
 				<span class="invslot">
 					<img class="information-spawn-egg-image"
-						 src="../images/items/Carrot_Pig_Spawn_Egg.png"
+						 caitem-src="Carrot_Pig_Spawn_Egg"
 						 alt="Carrot Pig Spawn Egg">
 				</span>
 			</span>

@@ -39,7 +39,6 @@
 
 .invslot {
 	position: relative;
-	display: inline-block;
 	background: #8B8B8B no-repeat center center / 32px 32px;
 	border: 2px solid;
 	border-color: #373737 #FFF #FFF #373737;
@@ -48,7 +47,14 @@
 	font-size: 16px;
 	line-height: 1;
 	text-align: left;
-	vertical-align: bottom;
+	vertical-align: auto;
+	display: flex;
+    justify-content: center; /* Center children horizontally */
+    align-items: center;
+}
+
+.invslot.active {
+	border: 3px solid rgb(107, 158, 246);
 }
 
 .invslot::before, .invslot::after {

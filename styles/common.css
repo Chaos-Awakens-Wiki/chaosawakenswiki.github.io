@@ -74,8 +74,8 @@ a:hover {
 }
 
 .chaos-awakens-logo {
-	padding: 1rem;
-	width: 12.5rem;
+	padding: 0.5rem 0;
+	width: 13.5rem;
 }
 
 .line-break-center {
@@ -159,4 +159,8 @@ a:hover {
 		background-color: #333;
 		border: color-mix(in srgb, lightskyblue 55%, white 45%) solid 3px;
 	}
+}
+
+.body {
+	margin: 0 1.25rem;
 }
