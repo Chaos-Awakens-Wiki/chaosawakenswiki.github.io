@@ -90,6 +90,5 @@
 }
 
 .category-item img {
-	width: 100px; /* Adjust image width as needed */
-	height: 100px; /* Adjust image height as needed */
+	height: 100px;
 }
